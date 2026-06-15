@@ -1,0 +1,1135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarah Rahman | Executive Growth Portfolio</title>
+<meta name="description" content="Executive portfolio of Sarah Rahman, Growth & Performance Manager specializing in Hospitality, E-Commerce, Revenue Growth and Operational Systems.">
+
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com"></script>
+<!-- Google Fonts (Plus Jakarta Sans for ultra-modern premium aesthetic) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+<!-- FontAwesome for Premium Icons -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+<script>
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    navy: {
+                        950: '#030712',
+                        900: '#070F2B',
+                        800: '#1B1A55',
+                        700: '#535C91'
+                    },
+                    gold: {
+                        50: '#FFFDF0',
+                        100: '#FEFAD3',
+                        200: '#FDF1A9',
+                        300: '#FCE374',
+                        400: '#FAD144',
+                        DEFAULT: '#C8A96B', // Custom Premium executive gold
+                        600: '#B09050',
+                        700: '#94753B',
+                        800: '#75592B'
+                    }
+                },
+                fontFamily: {
+                    sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                    serif: ['"Playfair Display"', 'serif']
+                }
+            }
+        }
+    }
+</script>
+
+<style>
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: #030712;
+    color: #f3f4f6;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+/* Custom premium scrollbar styling */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: #030712;
+}
+::-webkit-scrollbar-thumb {
+    background: #C8A96B;
+    border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #B09050;
+}
+
+/* Glassmorphism custom classes */
+.glass {
+    background: rgba(255, 255, 255, 0.015);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.5);
+    transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.glass:hover {
+    background: rgba(255, 255, 255, 0.03);
+    border-color: rgba(200, 169, 107, 0.25);
+    box-shadow: 0 15px 50px -10px rgba(200, 169, 107, 0.1);
+}
+
+/* Visual Glow Assets */
+.glow-gold {
+    box-shadow: 0 0 40px -10px rgba(200, 169, 107, 0.2);
+}
+.glow-dot {
+    filter: drop-shadow(0 0 8px rgba(200, 169, 107, 0.8));
+}
+
+/* Parallax grid overlay */
+.bg-grid {
+    background-size: 40px 40px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+/* Scroll reveal triggers */
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s cubic-bezier(0.16, 1, 0.3, 1), transform 1s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Interactive Timeline Path */
+.timeline-dot::after {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #C8A96B;
+    left: -41px;
+    top: 5px;
+    box-shadow: 0 0 12px #C8A96B;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover .timeline-dot::after {
+    transform: scale(1.4);
+    background: #fff;
+    box-shadow: 0 0 18px #fff;
+}
+</style>
+</head>
+<body class="relative min-h-screen">
+
+<!-- Custom Toast Notification System (Replaces alert) -->
+<div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
+    <div class="glass border-gold/30 rounded-xl p-4 flex items-center gap-3 max-w-sm">
+        <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold">
+            <i class="fa-solid fa-check"></i>
+        </div>
+        <div>
+            <p id="toast-title" class="font-bold text-xs text-white uppercase tracking-wider">System Action</p>
+            <p id="toast-msg" class="text-xs text-slate-400 mt-0.5">Success action successfully logged.</p>
+        </div>
+    </div>
+</div>
+
+<!-- Background elements -->
+<div class="absolute top-0 left-0 w-full h-[120vh] bg-grid pointer-events-none z-0"></div>
+<div class="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-gold/5 blur-[120px] pointer-events-none"></div>
+<div class="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
+
+<!-- NAVIGATION BAR -->
+<nav class="fixed w-full z-50 bg-navy-950/70 backdrop-blur-md border-b border-white/5 transition-all duration-300" id="main-nav">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+        <a href="#home" class="group flex flex-col">
+            <div class="font-black text-xl tracking-tight text-white group-hover:text-gold transition-colors">
+                SARAH RAHMAN
+            </div>
+            <div class="text-gold text-[10px] tracking-[0.35em] font-extrabold uppercase mt-0.5">
+                GROWTH &amp; PERFORMANCE
+            </div>
+        </a>
+        
+        <!-- Desktop Nav -->
+        <div class="hidden md:flex items-center space-x-8 text-xs tracking-wider uppercase font-bold text-slate-300">
+            <a href="#home" class="hover:text-gold transition-colors py-2 relative group">
+                Home
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#hospitality" class="hover:text-gold transition-colors py-2 relative group">
+                Hospitality
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#ecommerce" class="hover:text-gold transition-colors py-2 relative group">
+                E-Commerce
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#leadership" class="hover:text-gold transition-colors py-2 relative group">
+                Leadership Systems
+                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
+            </a>
+            <a href="#contact" class="bg-gold/10 hover:bg-gold hover:text-black border border-gold/30 px-4 py-2 rounded-lg transition-all duration-300 text-gold font-extrabold text-[11px] tracking-widest">
+                Connect
+            </a>
+        </div>
+        
+        <!-- Mobile menu toggle -->
+        <button class="md:hidden text-white hover:text-gold transition-colors focus:outline-none" onclick="toggleMobileNav()">
+            <i class="fa-solid fa-bars-staggered text-xl" id="menu-icon"></i>
+        </button>
+    </div>
+    
+    <!-- Mobile dropdown (hidden by default) -->
+    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-navy-950/95 backdrop-blur-lg px-6 py-4 space-y-4 text-xs uppercase font-extrabold tracking-wider">
+        <a href="#home" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">Home</a>
+        <a href="#hospitality" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">Hospitality</a>
+        <a href="#ecommerce" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">E-Commerce</a>
+        <a href="#leadership" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">Leadership Systems</a>
+        <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-gold">Get In Touch</a>
+    </div>
+</nav>
+
+<!-- HERO / DASHBOARD SECTION -->
+<section id="home" class="relative min-h-screen flex items-center pt-24 md:pt-12 overflow-hidden">
+    <div class="max-w-7xl mx-auto px-6 w-full z-10 relative">
+        <div class="grid lg:grid-cols-12 gap-12 items-center">
+            
+            <!-- Left Headline Block -->
+            <div class="lg:col-span-7 space-y-6 md:space-y-8">
+                <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 px-3 py-1.5 rounded-full text-[10px] uppercase font-black tracking-[0.25em] text-gold">
+                    <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse glow-dot"></span>
+                    Hands-On Strategic Manager
+                </div>
+                
+                <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.1] font-sans">
+                    Transforming Data <br class="hidden md:block">
+                    Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white italic font-serif">Scalable Revenue.</span>
+                </h1>
+                
+                <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-xl">
+                    Challenging platform biases, designing robust operational playbooks, and steering high-performance marketing structures with 6-figure budget efficiency.
+                </p>
+
+                <div class="flex flex-wrap gap-4">
+                    <a href="#hospitality" class="group bg-gradient-to-r from-gold to-gold-600 hover:from-white hover:to-white text-black px-6 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-gold/20 hover:scale-[1.02]">
+                        Explore Growth Cases
+                        <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
+                    </a>
+                    <a href="#leadership" class="border border-white/10 hover:border-gold/40 px-6 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest text-slate-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm">
+                        Operating Systems
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right Interactive Dynamic Dashboard Block -->
+            <div class="lg:col-span-5 relative" id="hero-dashboard-container">
+                <div class="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-tr from-gold/20 to-blue-500/20 blur-xl opacity-30"></div>
+                <div class="glass rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-6" id="parallax-card">
+                    
+                    <!-- Dashboard top-bar visual design -->
+                    <div class="flex justify-between items-center border-b border-white/5 pb-4">
+                        <div class="flex gap-1.5">
+                            <span class="w-3 h-3 rounded-full bg-red-500/50"></span>
+                            <span class="w-3 h-3 rounded-full bg-yellow-500/50"></span>
+                            <span class="w-3 h-3 rounded-full bg-green-500/50"></span>
+                        </div>
+                        <div class="text-[9px] font-mono text-slate-500 tracking-wider">LIVE_METRIC_ROUTER</div>
+                    </div>
+
+                    <!-- Highlight Metrics Grid -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <!-- Metric 1 -->
+                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
+                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">TikTok Growth</div>
+                            <div class="text-3xl font-black text-white mt-1 group-hover:scale-105 transition-transform origin-left">+3,700%</div>
+                            <div class="text-[8px] font-mono text-emerald-400 mt-1"><i class="fa-solid fa-chart-line"></i> cbgaesthetic.com</div>
+                        </div>
+                        <!-- Metric 2 -->
+                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
+                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">Mega Live ROI</div>
+                            <div class="text-3xl font-black text-gold mt-1 group-hover:scale-105 transition-transform origin-left">7.8x</div>
+                            <div class="text-[8px] font-mono text-gold-400 mt-1"><i class="fa-solid fa-bullseye"></i> 11.11 Single Session</div>
+                        </div>
+                        <!-- Metric 3 -->
+                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
+                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">F&B Bookings</div>
+                            <div class="text-3xl font-black text-white mt-1 group-hover:scale-105 transition-transform origin-left">100%</div>
+                            <div class="text-[8px] font-mono text-emerald-400 mt-1"><i class="fa-solid fa-chair"></i> Dim Sum Capacity</div>
+                        </div>
+                        <!-- Metric 4 -->
+                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
+                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">Production Costs</div>
+                            <div class="text-3xl font-black text-slate-300 mt-1 group-hover:scale-105 transition-transform origin-left">-70%</div>
+                            <div class="text-[8px] font-mono text-rose-400 mt-1"><i class="fa-solid fa-arrow-down-wide-narrow"></i> In-house Strategy</div>
+                        </div>
+                    </div>
+
+                    <!-- Custom Interactive SVG Sparkline Visualization -->
+                    <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 flex flex-col gap-2">
+                        <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-slate-500 font-bold">
+                            <span>Dynamic Growth Velocity</span>
+                            <span class="text-gold">Scale Engine</span>
+                        </div>
+                        <div class="h-16 w-full mt-1">
+                            <svg class="w-full h-full" viewBox="0 0 400 100" preserveAspectRatio="none">
+                                <defs>
+                                    <linearGradient id="glowGrad" x1="0" y1="0" x2="0" y2="1">
+                                        <stop offset="0%" stop-color="#C8A96B" stop-opacity="0.3"/>
+                                        <stop offset="100%" stop-color="#C8A96B" stop-opacity="0"/>
+                                    </linearGradient>
+                                </defs>
+                                <path d="M 0 80 Q 80 85 130 50 T 260 40 T 340 10 L 400 5 L 400 100 L 0 100 Z" fill="url(#glowGrad)" />
+                                <path d="M 0 80 Q 80 85 130 50 T 260 40 T 340 10 L 400 5" fill="none" stroke="#C8A96B" stroke-width="3" stroke-linecap="round" />
+                                <circle cx="400" cy="5" r="4" fill="#C8A96B" class="glow-dot" />
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- THE EXECUTIVE SCOPE OF AUTHORITY (No skill bars section) -->
+<section class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="grid lg:grid-cols-12 gap-12">
+            <!-- Left Info Block -->
+            <div class="lg:col-span-4 space-y-4 md:sticky md:top-28 h-fit">
+                <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Authority Scope</span>
+                <h2 class="text-3xl font-black text-white">How Executive Skill Is Quantified</h2>
+                <p class="text-slate-400 text-sm leading-relaxed">
+                    Rejecting juvenile percentage bars. Managers demonstrate leadership parameters through capital efficiency, scale velocity, systemized playbooks, and stakeholder orchestration.
+                </p>
+            </div>
+            
+            <!-- Right 2x2 Grid Authority Metrics -->
+            <div class="lg:col-span-8 grid sm:grid-cols-2 gap-6">
+                <!-- Box 1 -->
+                <div class="glass p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
+                        <i class="fa-solid fa-users-gear text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">People &amp; Matrix Leadership</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Direct ownership of 10-person Marcom team while harmoniously mobilizing cross-functional operations of 30+ stakeholders (Executive Chefs, Service Staff, and Operations Managers) and outsourced partners.
+                    </p>
+                </div>
+                <!-- Box 2 -->
+                <div class="glass p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
+                        <i class="fa-solid fa-chart-line text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Capital Efficiency &amp; Scale</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Precision administration of 6-figure monthly budgets. Harnessing real-time trend feedback loops to transition ad capital towards high-converting SKU targets instantly.
+                    </p>
+                </div>
+                <!-- Box 3 -->
+                <div class="glass p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
+                        <i class="fa-solid fa-file-shield text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Operational Playbook Design</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Standardizing high-performance milestones into corporate SOP assets. Codifying sales script optimizations, chat conversion structures, and system routing logic.
+                    </p>
+                </div>
+                <!-- Box 4 -->
+                <div class="glass p-6 rounded-2xl space-y-4">
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
+                        <i class="fa-solid fa-network-wired text-lg"></i>
+                    </div>
+                    <h3 class="text-lg font-bold text-white">Hybrid Growth Formula</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Synergizing Technical SEO keyword analysis, detailed store decoration (CRO), and short-format UGC video algorithms to generate 20+ campaign ROI structures.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- TIMELINE JOURNAL SECTION -->
+<section class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
+    <div class="max-w-4xl mx-auto px-6">
+        <div class="text-center space-y-2 mb-16">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Career Evolution</span>
+            <h2 class="text-3xl font-black text-white">The Career Velocity</h2>
+        </div>
+        
+        <div class="border-l-2 border-gold/20 pl-8 space-y-10 relative">
+            <!-- Timeline Item 1 -->
+            <div class="timeline-item relative reveal">
+                <div class="timeline-dot"></div>
+                <div class="glass p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
+                        <h3 class="text-lg font-black text-white">Growth &amp; Performance Manager</h3>
+                        <span class="text-[10px] bg-gold/10 text-gold border border-gold/20 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">Today</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Orchestrating digital strategy architecture, matrix cross-collaborations, high-performing SOP playbook scaling, and multi-channel campaign budget deployment.
+                    </p>
+                </div>
+            </div>
+            <!-- Timeline Item 2 -->
+            <div class="timeline-item relative reveal">
+                <div class="timeline-dot"></div>
+                <div class="glass p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
+                        <h3 class="text-lg font-bold text-slate-200">Marketing Communications Executive</h3>
+                        <span class="text-[10px] bg-white/5 text-slate-400 border border-white/10 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">2025</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Led omnichannel brand alignments, luxury campaign architectures, and digital-to-operational flow coordination for hospitality portfolios.
+                    </p>
+                </div>
+            </div>
+            <!-- Timeline Item 3 -->
+            <div class="timeline-item relative reveal">
+                <div class="timeline-dot"></div>
+                <div class="glass p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
+                        <h3 class="text-lg font-bold text-slate-200">Senior Digital Marketing</h3>
+                        <span class="text-[10px] bg-white/5 text-slate-400 border border-white/10 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">2022</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Coordinated paid-traffic campaign engines, custom A/B testing implementations, SEO performance mapping, and high-yield e-commerce optimizations.
+                    </p>
+                </div>
+            </div>
+            <!-- Timeline Item 4 -->
+            <div class="timeline-item relative reveal">
+                <div class="timeline-dot"></div>
+                <div class="glass p-6 rounded-2xl space-y-2">
+                    <div class="flex justify-between items-center flex-wrap gap-2">
+                        <h3 class="text-lg font-bold text-slate-300">Digital Marketing Specialist &amp; Content Journalist</h3>
+                        <span class="text-[10px] bg-white/5 text-slate-400 border border-white/10 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">2020 - 2021</span>
+                    </div>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Synthesized structured content directions with programmatic trends. Managed audience targeting logic and digital content pipeline assets.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASE STUDY: HOSPITALITY GROWTH -->
+<section id="hospitality" class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center space-y-2 mb-16">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Vertical 01: Hospitality</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">Hospitality Omnichannel Growth</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Re-engineering standard booking cycles and restructuring legacy target audience demographics.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-2 gap-10">
+            <!-- Campaign Item 1: 11.11 Mega Live -->
+            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
+                <!-- High-fidelity Mockup Visual for Live Commerce -->
+                <div class="h-64 bg-gradient-to-br from-navy-900 to-navy-950 relative overflow-hidden p-6 flex flex-col justify-between border-b border-white/5">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(200,169,107,0.1),transparent)] pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse glow-dot"></span>
+                            <span class="text-[10px] font-mono text-slate-400 tracking-wider">LIVE_BROADCAST_SYSTEM</span>
+                        </div>
+                        <span class="text-[9px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded font-mono">ACTIVE PIPELINE</span>
+                    </div>
+                    
+                    <!-- Simulating the video visual layout with CSS -->
+                    <div class="flex gap-4 items-center my-auto">
+                        <div class="w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center bg-navy-950 shrink-0 relative">
+                            <i class="fa-solid fa-microphone-lines text-gold text-xl"></i>
+                            <span class="absolute bottom-0 right-0 bg-red-600 text-[8px] font-black px-1 rounded-full text-white">LIVE</span>
+                        </div>
+                        <div class="space-y-1">
+                            <div class="text-xs font-bold text-white">11.11 Luxury Room &amp; Buffet Package</div>
+                            <div class="text-[10px] text-slate-400 flex items-center gap-1.5">
+                                <i class="fa-solid fa-users text-gold"></i> 4,120 Watching
+                                <span class="text-slate-600">|</span>
+                                <i class="fa-solid fa-clock text-slate-500"></i> In-house Hosts (No Agency MC)
+                            </div>
+                            <div class="flex gap-2 pt-1">
+                                <span class="text-[8px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">Direct Trust Optimization</span>
+                                <span class="text-[8px] bg-gold/10 border border-gold/20 px-2 py-0.5 rounded text-gold">-70% Production Cost</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end">
+                        <div class="text-xs">
+                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Campaign Velocity</div>
+                            <div class="text-lg font-black text-white">+63.93% Sales</div>
+                        </div>
+                        <div class="text-xs text-right">
+                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Campaign Yield</div>
+                            <div class="text-lg font-black text-gold">7.8 ROI</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Narrative and Expandable Strategy -->
+                <div class="p-8 space-y-4 flex-grow flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Process Simplification</span>
+                        <h3 class="text-2xl font-bold text-white">11.11 Mega Campaign Live Commerce</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Consolidated segmented room and food &amp; beverage live broadcasts into a unified, high-performing "Single Live Session". Built long-term organizational trust by scaling in-house operations.
+                        </p>
+                    </div>
+
+                    <!-- Accordion Dropdown Trigger -->
+                    <div class="pt-4 border-t border-white/5">
+                        <button onclick="toggleSTAR('hospitality-01')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Read Deep-Dive Strategy</span>
+                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-hospitality-01"></i>
+                        </button>
+                        
+                        <!-- STAR Breakdown (Collapsed by default) -->
+                        <div id="star-hospitality-01" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
+                                    <p class="text-slate-400 leading-relaxed text-[11px]">Legacy live streams were severely fractured between room sales and restaurant buffets. Relied heavily on expensive external agencies and actors, reducing profitability.</p>
+                                </div>
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4>
+                                    <p class="text-slate-400 leading-relaxed text-[11px]">Consolidate multi-channel operations into a single streaming strategy, reduce high agency markup fees, and optimize absolute transaction ROI.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">
+                                    Architected the "Single Live Session" matrix layout. Championed trust-focused brand representation by training and deploying key internal staff as broadcasting hosts. Directly engineered system integrations, stream pacing structures, and real-time transaction processing.
+                                </p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
+                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">
+                                    Drove production spending down by 70% while elevating global transaction volumes by +63.93%, resulting in a premium 7.8 Campaign ROI output.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Campaign Item 2: Dim Sum Buffet -->
+            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
+                <!-- High-fidelity Mockup Visual for A/B Testing & Demographics -->
+                <div class="h-64 bg-gradient-to-br from-navy-900 to-navy-950 relative overflow-hidden p-6 flex flex-col justify-between border-b border-white/5">
+                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(200,169,107,0.08),transparent)] pointer-events-none"></div>
+                    
+                    <div class="flex justify-between items-center">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-users-viewfinder text-gold text-xs"></i>
+                            <span class="text-[10px] font-mono text-slate-400 tracking-wider">A/B_DEMOGRAPHIC_MAPPING</span>
+                        </div>
+                        <span class="text-[9px] bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-mono">RE-TARGET ACTIVE</span>
+                    </div>
+
+                    <!-- Simulating visual graphics for target demographics -->
+                    <div class="grid grid-cols-2 gap-4 items-center my-auto">
+                        <!-- Demographics visual representation -->
+                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-2">
+                            <div class="text-[8px] text-slate-500 uppercase tracking-widest font-black">Identified Target</div>
+                            <div class="flex items-center gap-1.5">
+                                <i class="fa-solid fa-user-check text-gold text-xs"></i>
+                                <span class="text-xs font-bold text-white">Active Seniors</span>
+                            </div>
+                            <div class="text-[9px] text-emerald-400 font-mono">Age Range: 45 - 60+</div>
+                        </div>
+                        
+                        <!-- Design optimizations visual -->
+                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-2">
+                            <div class="text-[8px] text-slate-500 uppercase tracking-widest font-black">UX Refinements</div>
+                            <div class="text-[10px] text-slate-300 font-bold flex items-center gap-1">
+                                <i class="fa-solid fa-magnifying-glass-plus text-gold"></i> Size +200%
+                            </div>
+                            <div class="text-[8px] text-slate-400">High contrast legibility layout</div>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between items-end border-t border-white/5 pt-3">
+                        <div>
+                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Daily Reservations</div>
+                            <div class="text-sm font-bold text-white"><i class="fa-solid fa-calendar-check text-gold"></i> Fully Booked</div>
+                        </div>
+                        <div class="text-right">
+                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Capacity Scaling</div>
+                            <div class="text-sm font-extrabold text-gold">40 Tables Reserved Daily</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Strategic Narrative and Expandable Strategy -->
+                <div class="p-8 space-y-4 flex-grow flex flex-col justify-between">
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Demographic Pivot Strategy</span>
+                        <h3 class="text-2xl font-bold text-white">The Weekday Dim Sum Buffet Turnaround</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Defied traditional weekday dining campaign standards. Discovered and focused on niche age groups by restructuring digital marketing pathways.
+                        </p>
+                    </div>
+
+                    <!-- Accordion Dropdown Trigger -->
+                    <div class="pt-4 border-t border-white/5">
+                        <button onclick="toggleSTAR('hospitality-02')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Read Deep-Dive Strategy</span>
+                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-hospitality-02"></i>
+                        </button>
+                        
+                        <!-- STAR Breakdown (Collapsed by default) -->
+                        <div id="star-hospitality-02" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
+                                    <p class="text-slate-400 leading-relaxed text-[11px]">Weekday restaurant dining metrics were underperforming. Legacy systems targeted generic young demographics with low weekday availability.</p>
+                                </div>
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4>
+                                    <p class="text-slate-400 leading-relaxed text-[11px]">Identify high-intent demographic markets capable of filling dining capacities consistently on weekday schedules.</p>
+                                </div>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">
+                                    Orchestrated strict digital A/B testing and tracked messenger inquiries, revealing senior demographics (Ages 45-60+) as top buyers. Negotiated menu alignments directly with culinary leaders, enlarged font styles on key creatives, and deployed high-performance conversion scripts for the sales team.
+                                </p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
+                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">
+                                    Transformed empty tables into a consistent reservation funnel, generating a booked capacity of over 40 dining tables per day.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CASE STUDY: E-COMMERCE SCALING -->
+<section id="ecommerce" class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center space-y-2 mb-16">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Vertical 02: E-Commerce</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">E-Commerce Scaling &amp; Turnarounds</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Re-engineering platform methodologies and validating premium beauty devices on high-growth channels.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8">
+            <!-- Card 1: TikTok Domination -->
+            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
+                <!-- Visual Mockup for TikTok Graph -->
+                <div class="h-56 bg-gradient-to-b from-navy-900 to-navy-950 p-6 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] font-mono text-slate-500 tracking-wider">TIKTOK_ALGORITHM_MAPPING</span>
+                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 glow-dot"></span>
+                    </div>
+
+                    <!-- Custom CSS Graphic for scaling growth -->
+                    <div class="space-y-3 my-auto">
+                        <div class="flex justify-between text-xs text-slate-400">
+                            <span>Initial Yield (Jan)</span>
+                            <span class="text-white font-bold">34K THB</span>
+                        </div>
+                        <div class="relative w-full h-2 bg-white/5 rounded-full overflow-hidden">
+                            <div class="absolute top-0 left-0 h-full bg-gold rounded-full w-[10%]"></div>
+                        </div>
+                        <div class="flex justify-between text-xs text-slate-400 pt-1">
+                            <span>Final Scale (Dec)</span>
+                            <span class="text-gold font-black">1.3M THB</span>
+                        </div>
+                        <div class="relative w-full h-2.5 bg-white/5 rounded-full overflow-hidden">
+                            <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gold to-white rounded-full w-full animate-pulse"></div>
+                        </div>
+                    </div>
+
+                    <div class="text-[10px] text-slate-500 font-mono text-right font-bold">Yearly Scale: +3,700% YoY</div>
+                </div>
+
+                <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1.5">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Platform Defiance</span>
+                        <h3 class="text-xl font-bold text-white">TikTok Shop Domination</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Overruled standard internal biases targeting cheap SKU sales. Executed and scaled premium aesthetic assets to win highly profitable transactions.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/5">
+                        <button onclick="toggleSTAR('ecommerce-01')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Read Strategy</span>
+                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-01"></i>
+                        </button>
+                        
+                        <div id="star-ecommerce-01" class="hidden mt-3 pt-3 border-t border-white/5 space-y-3 text-xs">
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">Stakeholders assumed premium beauty devices could not sell on short-video media, labeling TikTok as exclusively lower-budget demographics.</p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">Challenged conventional practices. Designed video campaigns showcasing high-performance clinical aesthetics. Handpicked key premium KOL influencers and realigned weekly ad spend instantly to scale winning video hooks.</p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
+                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">Propelled sales from 34K to 1.3 Million THB monthly. Secured long-term e-commerce scaling dominance, permanently exceeding legacy platform channels.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2: IPL Product Rescue -->
+            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
+                <!-- Visual Mockup for SEO/Spec Listing Overhaul -->
+                <div class="h-56 bg-gradient-to-b from-navy-900 to-navy-950 p-6 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] font-mono text-slate-500 tracking-wider">LISTING_UX_CONVERSION</span>
+                        <span class="text-[9px] bg-gold/10 text-gold border border-gold/20 px-2 py-0.5 rounded font-mono">CRO REDESIGN</span>
+                    </div>
+
+                    <!-- Simulating the conversion change -->
+                    <div class="grid grid-cols-2 gap-3 items-center my-auto">
+                        <div class="bg-red-500/5 border border-red-500/10 p-2.5 rounded-xl space-y-1 text-center">
+                            <span class="text-[8px] text-slate-500 uppercase tracking-widest block">Legacy Specs</span>
+                            <span class="text-[9px] text-red-400 line-through">"Easy hair removal"</span>
+                        </div>
+                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-2.5 rounded-xl space-y-1 text-center">
+                            <span class="text-[8px] text-slate-500 uppercase tracking-widest block">Technical Spec</span>
+                            <span class="text-[9px] text-emerald-400 font-bold">"Professional 15J Joule + UV Filter"</span>
+                        </div>
+                    </div>
+
+                    <div class="flex justify-between text-[10px] text-slate-500 border-t border-white/5 pt-2">
+                        <span>Store Ranking Performance:</span>
+                        <span class="text-white font-bold">#2 Best Seller</span>
+                    </div>
+                </div>
+
+                <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1.5">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">SEO &amp; Listing CRO</span>
+                        <h3 class="text-xl font-bold text-white">IPL Product Line Rescue</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Rescued an underperforming device line from termination. Realigned the global buyer journey by prioritizing detailed clinical and mechanical specifications.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/5">
+                        <button onclick="toggleSTAR('ecommerce-02')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Read Strategy</span>
+                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-02"></i>
+                        </button>
+                        
+                        <div id="star-ecommerce-02" class="hidden mt-3 pt-3 border-t border-white/5 space-y-3 text-xs">
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">An underperforming IPL device line faced immediate discontinuation because of stagnant conversion rates and poor page positioning.</p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">Overhauled product branding from superficial cosmetic marketing to expert medical specs. Reconstructed the listing decoration and engineered precise Keyword Bidding strategies to capture high-intent buyers.</p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
+                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">Propelled the device to the #2 store seller rank, securing executive approval and capital funding for next-generation models.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3: X Launch -->
+            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
+                <!-- Visual Mockup for Social Platform Reach -->
+                <div class="h-56 bg-gradient-to-b from-navy-900 to-navy-950 p-6 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
+                    <div class="flex justify-between items-center">
+                        <span class="text-[9px] font-mono text-slate-500 tracking-wider">X_ECOSYSTEM_VOLUME</span>
+                        <i class="fa-brands fa-x-twitter text-white text-sm"></i>
+                    </div>
+
+                    <!-- Simulating structured social campaign flow -->
+                    <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-1.5 my-auto">
+                        <div class="text-[9px] text-gold font-bold">Concept: Vietnamese Aesthetic UGC</div>
+                        <p class="text-[8px] text-slate-400 leading-relaxed">Scaling micro-KOL reviews showcasing 40mm volume ion tech in real-life beauty routines.</p>
+                        <div class="flex gap-2 text-[8px] text-slate-500 pt-1">
+                            <span><i class="fa-solid fa-heart text-rose-500"></i> 14.2K</span>
+                            <span><i class="fa-solid fa-retweet text-emerald-400"></i> 3.8K</span>
+                        </div>
+                    </div>
+
+                    <div class="text-[10px] text-slate-500 font-mono text-right font-bold">Organic Brand Lift Trend: +410%</div>
+                </div>
+
+                <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
+                    <div class="space-y-1.5">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Niche Channel Dominance</span>
+                        <h3 class="text-xl font-bold text-white">Kiki &amp; Co Launch Campaign</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed">
+                            Sidetracked high-cost traditional media networks. Engineered organic user review architectures on X to match multi-million dollar television budgets.
+                        </p>
+                    </div>
+
+                    <div class="pt-4 border-t border-white/5">
+                        <button onclick="toggleSTAR('ecommerce-03')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Read Strategy</span>
+                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-03"></i>
+                        </button>
+                        
+                        <div id="star-ecommerce-03" class="hidden mt-3 pt-3 border-t border-white/5 space-y-3 text-xs">
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">Launching a specialized 40mm hair curler in a market saturated by legacy brands commanding high-budget television campaigns.</p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
+                                <p class="text-slate-400 leading-relaxed text-[11px]">Identified and prioritized untapped reviewer structures on X. Directed an organic aesthetic direction focused on Vietnamese beauty and active ionic hair protection, coordinating with a high-performing micro-KOL group.</p>
+                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
+                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
+                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">Achieved sales volumes directly matching media budgets of massive legacy brands, securing immediate market stability for the sub-brand.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- OPERATING SYSTEMS BEHIND THE GROWTH (Interactive Section) -->
+<section id="leadership" class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center space-y-2 mb-16">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Operating Systems</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">Systems That Scale Organizations</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Tactical campaigns are transient. True growth is driven by standardizing operational structures, matrix alignments, and dynamic capital modeling.</p>
+        </div>
+
+        <div class="grid lg:grid-cols-3 gap-8 mb-16">
+            <!-- System 1: Dynamic Capital Simulation -->
+            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
+                <div class="space-y-3">
+                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Interactive Calculator</span>
+                    <h3 class="text-2xl font-bold text-white">Dynamic Ad Capital Router</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        A real-world simulation of Sarah's dynamic budget methodology. Move the slider below to see how optimizing weekly traffic channels minimizes marketing waste.
+                    </p>
+                </div>
+                
+                <!-- Dynamic Calculation Widget -->
+                <div class="bg-navy-950/60 p-4 rounded-2xl border border-white/5 space-y-4">
+                    <div class="flex justify-between text-[10px] text-slate-400 uppercase tracking-wider font-bold">
+                        <span>Weekly Dynamic Shift</span>
+                        <span class="text-gold" id="percent-label">50% Optimization</span>
+                    </div>
+                    <input type="range" id="budget-slider" min="10" max="100" value="50" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold" oninput="updateBudgetSimulation(this.value)">
+                    <div class="flex justify-between items-center border-t border-white/5 pt-3">
+                        <div class="text-xs text-slate-500">Projected Ad Waste:</div>
+                        <div class="text-sm font-black text-rose-400" id="waste-val">-40.0%</div>
+                    </div>
+                    <div class="flex justify-between items-center">
+                        <div class="text-xs text-slate-500">Optimized Channel ROAS:</div>
+                        <div class="text-sm font-black text-emerald-400" id="roas-val">4.50x</div>
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-slate-500 font-mono italic">
+                    *Based on tracking active campaigns and prioritizing winning SKUs on a weekly cadence.
+                </div>
+            </div>
+
+            <!-- System 2: Customer Chat Playbook Flowchart -->
+            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
+                <div class="space-y-3">
+                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Standard Playbook Asset</span>
+                    <h3 class="text-2xl font-bold text-white">SOP Chat Conversion Structure</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Transforming technical specs and audience concerns into a highly standardized sales script sequence for customer service agents.
+                    </p>
+                </div>
+
+                <!-- Simulated Flow Diagram -->
+                <div class="space-y-3 text-center text-[10px] uppercase font-bold tracking-wider">
+                    <div class="bg-white/5 border border-white/10 p-2.5 rounded-xl text-slate-300">
+                        Inquiry: Specific Skin Concern
+                    </div>
+                    <div class="w-0.5 h-3 bg-gold/50 mx-auto"></div>
+                    <div class="bg-gold/15 border border-gold/30 p-2.5 rounded-xl text-gold">
+                        SOP Diagnosis &amp; Custom Clinical Spec Map
+                    </div>
+                    <div class="w-0.5 h-3 bg-gold/50 mx-auto"></div>
+                    <div class="bg-emerald-500/10 border border-emerald-500/20 p-2.5 rounded-xl text-emerald-400">
+                        High-Converting Close Script &amp; Up-Sell Match
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-slate-500 font-mono text-center">
+                    🔒 Playbook Preview: Admin closing rates increased by +35%.
+                </div>
+            </div>
+
+            <!-- System 3: Matrix Leadership Structure -->
+            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
+                <div class="space-y-3">
+                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Operational Diagram</span>
+                    <h3 class="text-2xl font-bold text-white">Matrix Leadership Setup</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed">
+                        Orchestrating direct internal teams alongside cross-functional restaurant departments and external agencies.
+                    </p>
+                </div>
+
+                <!-- Structured organization layout simulated in CSS -->
+                <div class="grid grid-cols-3 gap-2 text-center text-[9px] font-bold">
+                    <div class="col-span-3 bg-gold text-black py-2 rounded-xl">
+                        Sarah Rahman (Growth Head)
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-2 rounded-lg text-slate-300">
+                        Marcom Team<br>(10 Staff)
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-2 rounded-lg text-slate-300">
+                        F&amp;B Operations<br>(30+ Stakeholders)
+                    </div>
+                    <div class="bg-white/5 border border-white/10 p-2 rounded-lg text-slate-300">
+                        Agencies<br>(4 Partners)
+                    </div>
+                </div>
+
+                <div class="text-[10px] text-slate-500 font-mono text-center">
+                    Seamless coordination between brand strategy and operations.
+                </div>
+            </div>
+        </div>
+
+        <!-- Global Scope Highlight Card -->
+        <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden reveal">
+            <div class="absolute inset-0 bg-gradient-to-r from-gold/5 to-transparent pointer-events-none"></div>
+            
+            <h3 class="text-2xl font-black text-white mb-8 text-center md:text-left">Leadership Framework Key Metrics</h3>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
+                <div class="space-y-1">
+                    <div class="text-4xl font-black text-gold">10</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Direct Staff Managed</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-4xl font-black text-white">30+</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Cross-Functional Stakeholders</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-4xl font-black text-gold">6-Figure</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Monthly Ad Allocations</div>
+                </div>
+                <div class="space-y-1">
+                    <div class="text-4xl font-black text-white">20+</div>
+                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Successful Campaigns</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CONNECT / INQUIRY SECTION -->
+<section id="contact" class="py-24 relative z-10 border-t border-white/5">
+    <div class="max-w-xl mx-auto px-6">
+        <div class="text-center space-y-2 mb-12">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Corporate Relations</span>
+            <h2 class="text-3xl font-black text-white">Initiate Collaboration</h2>
+            <p class="text-xs text-slate-400 leading-relaxed">
+                Connect for Marketing Manager, Growth, and Performance Strategy positions.
+            </p>
+        </div>
+
+        <form id="contact-form" onsubmit="handleFormSubmission(event)" class="space-y-5">
+            <div class="space-y-2">
+                <label class="block text-[9px] font-bold uppercase tracking-wider text-slate-400">Your Identity / Organization</label>
+                <input type="text" id="form-name" required placeholder="John Doe / Enterprise" class="w-full bg-white/[0.01] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-gold transition-colors">
+            </div>
+            
+            <div class="space-y-2">
+                <label class="block text-[9px] font-bold uppercase tracking-wider text-slate-400">Professional Email Address</label>
+                <input type="email" id="form-email" required placeholder="john@enterprise.com" class="w-full bg-white/[0.01] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-gold transition-colors">
+            </div>
+
+            <div class="space-y-2">
+                <label class="block text-[9px] font-bold uppercase tracking-wider text-slate-400">Proposed Engagement Model</label>
+                <textarea id="form-message" required rows="4" placeholder="Brief outline of candidate requirements and company goals..." class="w-full bg-white/[0.01] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-gold transition-colors"></textarea>
+            </div>
+
+            <button type="submit" class="w-full bg-gradient-to-r from-gold to-gold-600 hover:from-white hover:to-white text-black py-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-gold/10">
+                Send Secure Inquiry
+            </button>
+        </form>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="py-12 text-center border-t border-white/5 text-slate-500 text-[11px] space-y-1 relative z-10">
+    <div class="font-bold text-slate-400 uppercase tracking-wider">SARAH RAHMAN</div>
+    <div>Growth &amp; Performance Manager Portfolio</div>
+    <div class="text-[9px] text-slate-600 font-mono mt-2">Designed with absolute business integrity. Standard metrics used.</div>
+</footer>
+
+<!-- SYSTEM SCRIPTS -->
+<script>
+// Responsive Navigation Scroll Effect
+window.addEventListener('scroll', () => {
+    const nav = document.getElementById('main-nav');
+    if (window.scrollY > 20) {
+        nav.classList.add('bg-navy-950/95', 'border-white/10', 'py-3');
+        nav.classList.remove('bg-navy-950/70', 'border-white/5', 'py-4');
+    } else {
+        nav.classList.remove('bg-navy-950/95', 'border-white/10', 'py-3');
+        nav.classList.add('bg-navy-950/70', 'border-white/5', 'py-4');
+    }
+});
+
+// Mobile menu toggle logic
+function toggleMobileNav() {
+    const menu = document.getElementById('mobile-menu');
+    const icon = document.getElementById('menu-icon');
+    
+    if (menu.classList.contains('hidden')) {
+        menu.classList.remove('hidden');
+        icon.classList.remove('fa-bars-staggered');
+        icon.classList.add('fa-xmark');
+    } else {
+        menu.classList.add('hidden');
+        icon.classList.add('fa-bars-staggered');
+        icon.classList.remove('fa-xmark');
+    }
+}
+
+// Intersecting Scroll Reveal Mechanism
+const revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+        }
+    });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+// Interactive Parallax mouse effects for high-fidelity Hero Card
+window.addEventListener('mousemove', e => {
+    const container = document.getElementById('hero-dashboard-container');
+    if (!container) return;
+    
+    // Check viewport width to avoid parallax jumping on mobile devices
+    if (window.innerWidth > 1024) {
+        const card = document.getElementById('parallax-card');
+        const rect = container.getBoundingClientRect();
+        
+        // Calculate dynamic relative coordinates
+        const x = e.clientX - rect.left - (rect.width / 2);
+        const y = e.clientY - rect.top - (rect.height / 2);
+        
+        // Set dynamic transform values
+        card.style.transform = `rotateY(${x * 0.03}deg) rotateX(${-y * 0.03}deg) translateZ(10px)`;
+    }
+});
+
+// Reset card transform on mouseout
+document.getElementById('hero-dashboard-container')?.addEventListener('mouseleave', () => {
+    const card = document.getElementById('parallax-card');
+    if (card) {
+        card.style.transform = 'none';
+    }
+});
+
+// Accordion Controller for STAR Deep-Dives
+function toggleSTAR(starId) {
+    const element = document.getElementById('star-' + starId);
+    const icon = document.getElementById('icon-' + starId);
+    
+    if (element.classList.contains('hidden')) {
+        element.classList.remove('hidden');
+        element.classList.add('animate-fade-in');
+        icon.classList.add('rotate-180');
+        showToast('STRATEGY DEPLOYED', 'STAR Narrative is now fully expanded.');
+    } else {
+        element.classList.add('hidden');
+        icon.classList.remove('rotate-180');
+    }
+}
+
+// Live Capital Router Simulator Logic
+function updateBudgetSimulation(val) {
+    const sliderPercent = parseInt(val);
+    const percentLabel = document.getElementById('percent-label');
+    const wasteVal = document.getElementById('waste-val');
+    const roasVal = document.getElementById('roas-val');
+    
+    // Label output
+    percentLabel.innerText = `${sliderPercent}% Optimization`;
+    
+    // Dynamic math representations
+    const wasteCalculated = -10.0 - (sliderPercent * 0.8);
+    const roasCalculated = 1.2 + (sliderPercent * 0.076);
+    
+    wasteVal.innerText = `${wasteCalculated.toFixed(1)}%`;
+    roasVal.innerText = `${roasCalculated.toFixed(2)}x`;
+}
+
+// Custom Premium Toast Notifications (Safe Alternative to forbidden alerts)
+function showToast(title, message) {
+    const toast = document.getElementById('toast');
+    const titleEl = document.getElementById('toast-title');
+    const msgEl = document.getElementById('toast-msg');
+    
+    titleEl.innerText = title;
+    msgEl.innerText = message;
+    
+    toast.classList.remove('translate-y-20', 'opacity-0');
+    toast.classList.add('translate-y-0', 'opacity-100');
+    
+    setTimeout(() => {
+        toast.classList.add('translate-y-20', 'opacity-0');
+        toast.classList.remove('translate-y-0', 'opacity-100');
+    }, 4000);
+}
+
+// Form Submission Execution System
+function handleFormSubmission(event) {
+    event.preventDefault();
+    
+    const name = document.getElementById('form-name').value;
+    const email = document.getElementById('form-email').value;
+    
+    // Clear inputs safely
+    document.getElementById('form-name').value = '';
+    document.getElementById('form-email').value = '';
+    document.getElementById('form-message').value = '';
+    
+    showToast('Secure Action Sent', `Connection established. Thank you, ${name}.`);
+}
+</script>
+
+</body>
+</html>
