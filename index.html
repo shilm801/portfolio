@@ -151,68 +151,54 @@ body {
     </div>
 </nav>
 
-<!-- HERO HEADER BLOCK -->
+<!-- HERO HEADER BLOCK (Fixed Mobile Center Layout) -->
 <section id="home" class="relative pt-28 pb-4 overflow-hidden">
     <div class="max-w-[1600px] mx-auto px-6 w-full z-10 relative">
-        <div class="grid lg:grid-cols-12 gap-8 items-start">
+        <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start text-center lg:text-left">
             
-            <!-- Left Portrait Framework Asset -->
-            <div class="lg:col-span-2 w-full max-w-[180px] rounded-2xl border border-white/10 bg-zinc-900 overflow-hidden shrink-0 aspect-[4/5] relative group shadow-2xl flex items-center justify-center text-center p-4">
-                <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex flex-col items-center justify-center z-0">
-                    <i class="fa-solid fa-user-tie text-xl text-zinc-700 mb-1"></i>
-                    <span class="text-[8px] font-mono tracking-widest text-zinc-600 uppercase font-bold">images/profile.jpg</span>
-                </div>
-                <img src="images/profile.jpg" alt="Sarah Rahman" class="absolute inset-0 w-full h-full object-cover z-10 opacity-0 group-hover:scale-[1.02] transition-all duration-500" onload="this.style.opacity='1'">
+            <!-- Fixed Layout Portrait Box Framework Asset (No longer tiny, perfectly centered on mobile) -->
+            <div class="w-full sm:w-[280px] lg:w-[320px] rounded-3xl border border-white/10 bg-zinc-900 overflow-hidden shrink-0 aspect-[4/5] relative group shadow-2xl">
+                <img src="images/profile.jpg" alt="Sarah Rahman" class="absolute inset-0 w-full h-full object-cover z-10 transition-all duration-500 group-hover:scale-[1.02]">
             </div>
             
             <!-- Right Biography Text Framework -->
-            <div class="lg:col-span-10 space-y-6 flex flex-col justify-center min-h-[220px]">
+            <div class="space-y-6 flex flex-col justify-center min-h-[220px] w-full">
                 <div class="space-y-4">
-                    <div class="inline-flex items-center bg-white/[0.03] border border-white/10 px-4 py-1 rounded-full text-[9px] uppercase font-black tracking-widest text-gold w-fit">
+                    <div class="inline-flex items-center bg-white/[0.03] border border-white/10 px-4 py-1 rounded-full text-[9px] uppercase font-black tracking-widest text-gold w-fit mx-auto lg:mx-0">
                         Marketing Manager <span class="mx-2 text-white/30">•</span> Growth &amp; Performance
                     </div>
                     <h1 class="text-3xl sm:text-4xl md:text-[45px] font-black tracking-tight text-white leading-[1.25] font-sans">
                         Driving Growth Through <br>
                         <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-white to-white/70 italic font-serif">Marketing, Systems &amp; Leadership.</span>
                     </h1>
-                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed max-w-3xl font-light">
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed max-w-3xl font-light mx-auto lg:mx-0">
                         Marketing Manager with 10+ years of experience leading growth initiatives, building operational systems, and managing high-performing teams to deliver measurable business impact.
                     </p>
                 </div>
 
-                <!-- Trusted Brands 6-Column Logo Container System -->
-                <div class="space-y-2 max-w-4xl">
-                    <span class="text-[8px] uppercase font-black tracking-[0.15em] text-slate-500 block pl-1">Trusted By Leading Brands</span>
-                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-3 w-full bg-white/[0.01] border border-white/5 rounded-2xl p-3">
-                        <!-- Brand 1 Container -->
-                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
-                            <img src="images/logos/brand1.png" alt="Company Logo 1" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
-                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand1.png</span>
+                <!-- Trusted Brands 5-Column Clean Logo Container System (Fixed Text Clutter & Size) -->
+                <div class="space-y-2 max-w-4xl w-full text-left">
+                    <span class="text-[8px] uppercase font-black tracking-[0.15em] text-slate-500 block pl-1 text-center lg:text-left">Trusted By Leading Brands</span>
+                    <div class="grid grid-cols-2 sm:grid-cols-5 gap-3 w-full bg-white/[0.01] border border-white/5 rounded-2xl p-3">
+                        <!-- Brand 1 Container (Chatrium) -->
+                        <div class="h-14 border border-white/5 bg-black/40 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img src="images/logos/brand1.png" alt="Chatrium Logo" class="w-full h-full object-contain filter brightness-100 transition-all duration-300">
                         </div>
-                        <!-- Brand 2 Container -->
-                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
-                            <img src="images/logos/brand2.png" alt="Company Logo 2" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
-                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand2.png</span>
+                        <!-- Brand 2 Container (Lacol) -->
+                        <div class="h-14 border border-white/5 bg-black/40 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img src="images/logos/brand2.png" alt="Lacol Logo" class="w-full h-full object-contain filter brightness-100 transition-all duration-300">
                         </div>
-                        <!-- Brand 3 Container -->
-                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
-                            <img src="images/logos/brand3.png" alt="Company Logo 3" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
-                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand3.png</span>
+                        <!-- Brand 3 Container (Commy) -->
+                        <div class="h-14 border border-white/5 bg-black/40 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img src="images/logos/brand3.png" alt="Commy Logo" class="w-full h-full object-contain filter brightness-100 transition-all duration-300">
                         </div>
-                        <!-- Brand 4 Container -->
-                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
-                            <img src="images/logos/brand4.png" alt="Company Logo 4" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
-                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand4.png</span>
+                        <!-- Brand 4 Container (ARIP) -->
+                        <div class="h-14 border border-white/5 bg-black/40 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img src="images/logos/brand4.png" alt="ARIP Logo" class="w-full h-full object-contain filter brightness-100 transition-all duration-300">
                         </div>
-                        <!-- Brand 5 Container -->
-                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
-                            <img src="images/logos/brand5.png" alt="Company Logo 5" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
-                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand5.png</span>
-                        </div>
-                        <!-- Brand 6 Container -->
-                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
-                            <img src="images/logos/brand6.png" alt="Company Logo 6" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
-                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand6.png</span>
+                        <!-- Brand 5 Container (Ch8) -->
+                        <div class="h-14 border border-white/5 bg-black/40 rounded-xl flex items-center justify-center p-2 relative overflow-hidden group">
+                            <img src="images/logos/brand5.png" alt="Channel 8 Logo" class="w-full h-full object-contain filter brightness-100 transition-all duration-300">
                         </div>
                     </div>
                 </div>
@@ -228,8 +214,9 @@ body {
         <div class="glass rounded-[24px] p-6 border-white/10 shadow-2xl bg-gradient-to-r from-navy-950 via-black/80 to-navy-950 flex flex-col space-y-5">
             
             <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                <!-- Fixed text string for narrow mobile layout compatibility -->
                 <h2 class="text-[10px] uppercase font-black tracking-widest text-slate-400 flex items-center gap-1.5 font-mono">
-                    <i class="fa-solid fa-terminal text-gold animate-pulse"></i> LIVE_METRIC_ROUTER
+                    <i class="fa-solid fa-terminal text-gold animate-pulse"></i> <span class="hidden sm:inline">LIVE_METRIC_ROUTER</span><span class="inline sm:hidden">METRIC_ROUTER</span>
                 </h2>
                 <div class="flex gap-1">
                     <span class="w-1.5 h-1.5 rounded-full bg-rose-500/80"></span>
@@ -591,12 +578,11 @@ body {
         </div>
 
         <div class="grid lg:grid-cols-2 gap-10">
-            <!-- Case Study 1: Hospitality Integrated Session -->
+            <!-- Case Study 1: Hospitality Integrated Session (Fixed paths to matches .png) -->
             <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
                 <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
                     <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
-                        [images/cases/hospitality-1111.jpg]
-                        <img src="images/cases/hospitality-1111.jpg" alt="11.11 Luxury Room Package" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:scale-105 transition-all duration-700" onload="this.style.opacity='0.8'">
+                        <img src="images/cases/hospitality-1111.png" alt="11.11 Luxury Room Package" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-all duration-700 group-hover:scale-105">
                     </div>
                     <div class="w-full flex justify-between items-center z-10 relative">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
@@ -614,9 +600,8 @@ body {
                             </h2>
                         </div>
                         <div class="col-span-4 flex justify-end">
-                            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/20 bg-zinc-800 shadow-xl overflow-hidden relative flex items-center justify-center font-mono text-[8px] text-zinc-500 text-center">
-                                [images/hosts/internal-mc.jpg]
-                                <img src="images/hosts/internal-mc.jpg" alt="Internal MC" class="absolute inset-0 w-full h-full object-cover opacity-0" onload="this.style.opacity='1'">
+                            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/20 bg-zinc-800 shadow-xl overflow-hidden relative flex items-center justify-center">
+                                <img src="images/hosts/internal-mc.png" alt="Internal MC" class="absolute inset-0 w-full h-full object-cover opacity-100">
                             </div>
                         </div>
                     </div>
@@ -667,12 +652,11 @@ body {
                 </div>
             </div>
 
-            <!-- Case Study 2: E-Commerce Channel Pivot -->
+            <!-- Case Study 2: E-Commerce Channel Pivot (Fixed path to match .png) -->
             <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
                 <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
                     <div class="absolute inset-0 bg-gradient-to-br from-black to-zinc-900 z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
-                        [images/cases/beauty-pivot.jpg]
-                        <img src="images/cases/beauty-pivot.jpg" alt="TikTok Shop Revenue Domination" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:scale-105 transition-all duration-700" onload="this.style.opacity='0.8'">
+                        <img src="images/cases/beauty-pivot.png" alt="TikTok Shop Revenue Domination" class="absolute inset-0 w-full h-full object-cover opacity-80 transition-all duration-700 group-hover:scale-105">
                     </div>
                     <div class="w-full flex justify-between items-center z-10 relative">
                         <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
@@ -737,7 +721,7 @@ body {
     </div>
 </section>
 
-<!-- BRAND COLLABORATION & PERFORMANCE GRAPHICS SHOWCASE (Refreshed Minimalist Logo Grid) -->
+<!-- BRAND COLLABORATION & PERFORMANCE SHOWCASE (Fixed Paths to match .png) -->
 <section id="ecommerce" class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center space-y-2 mb-16">
@@ -758,55 +742,49 @@ body {
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     
                     <!-- Brand 1 Card: Laneige -->
-                    <button onclick="openCollabModal('laneige', 'LANEIGE X CBG Devices Collaboration', 'Water Sleeping Mask Campaign Bundle Set Activation Framework', 'images/collabs/laneige-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
-                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
-                            <img src="images/logos/laneige.png" alt="Laneige Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
-                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">LANEIGE</span>
+                    <button onclick="openCollabModal('laneige', 'LANEIGE X CBG Devices Collaboration', 'Water Sleeping Mask Campaign Bundle Set Activation Framework', 'images/collabs/laneige-activity.png')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-1 relative max-h-[50px]">
+                            <img src="images/logos/laneige.png" alt="Laneige Logo" class="w-full h-full object-contain opacity-90">
                         </div>
                         <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
                     </button>
 
                     <!-- Brand 2 Card: Smooth-E -->
-                    <button onclick="openCollabModal('smooth-e', 'SMOOTH-E X CBG Devices Collaboration', 'Anti-Acne LED Facial Sync Launch Integrated Campaign Structure', 'images/collabs/smoothe-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
-                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
-                            <img src="images/logos/smoothe.png" alt="Smooth-E Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
-                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">SMOOTH-E</span>
+                    <button onclick="openCollabModal('smooth-e', 'SMOOTH-E X CBG Devices Collaboration', 'Anti-Acne LED Facial Sync Launch Integrated Campaign Structure', 'images/collabs/smoothe-activity.png')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-1 relative max-h-[50px]">
+                            <img src="images/logos/smoothe.png" alt="Smooth-E Logo" class="w-full h-full object-contain opacity-90">
                         </div>
                         <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
                     </button>
 
                     <!-- Brand 3 Card: Innisfree -->
-                    <button onclick="openCollabModal('innisfree', 'INNISFREE X CBG Devices Collaboration', 'Amino Cleansing Synergy Bundle Cross-Channel Campaign Matrix', 'images/collabs/innisfree-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
-                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
-                            <img src="images/logos/innisfree.png" alt="Innisfree Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
-                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">INNISFREE</span>
+                    <button onclick="openCollabModal('innisfree', 'INNISFREE X CBG Devices Collaboration', 'Amino Cleansing Synergy Bundle Cross-Channel Campaign Matrix', 'images/collabs/innisfree-activity.png')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-1 relative max-h-[50px]">
+                            <img src="images/logos/innisfree.png" alt="Innisfree Logo" class="w-full h-full object-contain opacity-90">
                         </div>
                         <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
                     </button>
 
                     <!-- Brand 4 Card: Vistra -->
-                    <button onclick="openCollabModal('vistra', 'VISTRA X CBG Devices Strategic Alignment', 'Beauty White Supplemental Conversion Funnel Strategic Execution', 'images/collabs/vistra-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
-                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
-                            <img src="images/logos/vistra.png" alt="Vistra Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
-                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">VISTRA</span>
+                    <button onclick="openCollabModal('vistra', 'VISTRA X CBG Devices Strategic Alignment', 'Beauty White Supplemental Conversion Funnel Strategic Execution', 'images/collabs/vistra-activity.png')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-1 relative max-h-[50px]">
+                            <img src="images/logos/vistra.png" alt="Vistra Logo" class="w-full h-full object-contain opacity-90">
                         </div>
                         <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
                     </button>
 
-                    <!-- Brand 5 Card: Provamed -->
-                    <button onclick="openCollabModal('provamed', 'PROVAMED X CBG Devices Strategic Alignment', 'Dermatological Skin Solution Cross-Selling Architecture Optimization', 'images/collabs/provamed-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
-                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
-                            <img src="images/logos/provamed.png" alt="Provamed Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
-                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">PROVAMED</span>
+                    <!-- Brand 5 Card: Provamed (Fixed URL redirection path to link Vistra asset) -->
+                    <button onclick="openCollabModal('provamed', 'PROVAMED X CBG Devices Strategic Alignment', 'Dermatological Skin Solution Cross-Selling Architecture Optimization', 'images/collabs/vistra-activity.png')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-1 relative max-h-[50px]">
+                            <img src="images/logos/provamed.png" alt="Provamed Logo" class="w-full h-full object-contain opacity-90">
                         </div>
                         <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
                     </button>
 
                     <!-- Brand 6 Card: Araya -->
-                    <button onclick="openCollabModal('araya', 'ARAYA X CBG Devices Strategic Alignment', 'E-Commerce Payday Mega Conversion Funnel Activation Layout', 'images/collabs/araya-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
-                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
-                            <img src="images/logos/araya.png" alt="Araya Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
-                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">ARAYA</span>
+                    <button onclick="openCollabModal('araya', 'ARAYA X CBG Devices Strategic Alignment', 'E-Commerce Payday Mega Conversion Funnel Activation Layout', 'images/collabs/araya-activity.png')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-1 relative max-h-[50px]">
+                            <img src="images/logos/araya.png" alt="Araya Logo" class="w-full h-full object-contain opacity-90">
                         </div>
                         <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
                     </button>
@@ -829,7 +807,7 @@ body {
                         <span class="font-bold uppercase tracking-wider">images/reports/looker-dashboard.png</span>
                         <span class="text-zinc-500 text-[8px] mt-1 flex items-center gap-1 font-sans"><i class="fa-solid fa-magnifying-glass-plus"></i> Click to enlarge view</span>
                     </div>
-                    <img src="images/reports/looker-dashboard.png" alt="Looker Studio Analytics Interface" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-300 group-hover:scale-[1.01]" onload="this.style.opacity='0.75'">
+                    <img src="images/reports/looker-dashboard.png" alt="Looker Studio Analytics Interface" class="absolute inset-0 w-full h-full object-cover opacity-75 transition-all duration-300 group-hover:scale-[1.01]">
                 </button>
                 
                 <div class="text-[9px] font-mono text-slate-500 italic text-center font-light">🔒 Enterprise report templates available. Validation credentials supplied upon request.</div>
@@ -839,18 +817,17 @@ body {
     </div>
 </section>
 
-<!-- INTERACTIVE DATA & BRAND IMAGE MODAL OVERLAY FRAME (Unified 16:9 Lightbox Engine) -->
+<!-- INTERACTIVE DATA & BRAND IMAGE MODAL OVERLAY FRAME (Unified Lightbox Engine with object-contain fix) -->
 <div id="collab-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="bg-slate-900 border border-white/10 w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl relative transform scale-95 transition-transform duration-300" id="modal-container">
         <button onclick="closeCollabModal()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white hover:text-gold transition-colors focus:outline-none"><i class="fa-solid fa-xmark text-sm"></i></button>
         
-        <!-- Strict 16:9 Aspect Ratio Outer Frame Lock -->
+        <!-- Frame Layout Fixed for multiple image ratios -->
         <div class="w-full aspect-video bg-zinc-950 relative flex items-center justify-center font-mono text-[10px] text-zinc-600 border-b border-white/5 p-4 text-center">
             <div class="space-y-2 select-none">
                 <i class="fa-regular fa-image text-xl block text-zinc-700"></i>
                 <p class="font-bold uppercase tracking-wider" id="modal-placeholder-text">Target Image Link</p>
             </div>
-            <!-- Calibrated image core with smooth object-contain formatting for 16:9 frames -->
             <img id="modal-img" src="" alt="Campaign Visual View" class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 z-10" onload="this.style.opacity='1'">
         </div>
         
