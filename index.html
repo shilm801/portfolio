@@ -3,15 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sarah Rahman | Executive Growth Portfolio</title>
-<meta name="description" content="Executive portfolio of Sarah Rahman, Growth & Performance Manager specializing in Hospitality, E-Commerce, Revenue Growth and Operational Systems.">
+<title>Sarah Rahman | Marketing Manager | Growth Strategy &amp; Performance Marketing</title>
+<meta name="description" content="Executive portfolio of Sarah Rahman, Marketing Manager specializing in Hospitality Marketing, Performance Marketing, E-Commerce, Growth Strategy, Revenue Growth, and Operational Systems.">
 
 <!-- Tailwind CSS CDN -->
 <script src="https://cdn.tailwindcss.com"></script>
-<!-- Google Fonts (Plus Jakarta Sans for ultra-modern premium aesthetic) -->
+<!-- Google Fonts -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,500&display=swap" rel="stylesheet">
 <!-- FontAwesome for Premium Icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
@@ -21,10 +21,10 @@
             extend: {
                 colors: {
                     navy: {
-                        950: '#030712',
+                        950: '#020617',
                         900: '#070F2B',
-                        800: '#1B1A55',
-                        700: '#535C91'
+                        800: '#0f172a',
+                        700: '#1e293b'
                     },
                     gold: {
                         50: '#FFFDF0',
@@ -32,7 +32,7 @@
                         200: '#FDF1A9',
                         300: '#FCE374',
                         400: '#FAD144',
-                        DEFAULT: '#C8A96B', // Custom Premium executive gold
+                        DEFAULT: '#C8A96B', 
                         600: '#B09050',
                         700: '#94753B',
                         800: '#75592B'
@@ -58,7 +58,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Custom premium scrollbar styling */
+/* Premium scrollbar styling */
 ::-webkit-scrollbar {
     width: 6px;
 }
@@ -90,17 +90,23 @@ body {
 
 /* Visual Glow Assets */
 .glow-gold {
-    box-shadow: 0 0 40px -10px rgba(200, 169, 107, 0.2);
+    box-shadow: 0 0 30px -5px rgba(200, 169, 107, 0.25);
 }
 .glow-dot {
     filter: drop-shadow(0 0 8px rgba(200, 169, 107, 0.8));
+}
+.glow-green {
+    filter: drop-shadow(0 0 8px rgba(52, 211, 153, 0.8));
+}
+.glow-red {
+    filter: drop-shadow(0 0 8px rgba(244, 63, 94, 0.8));
 }
 
 /* Parallax grid overlay */
 .bg-grid {
     background-size: 40px 40px;
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.01) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(255, 255, 255, 0.01) 1px, transparent 1px);
 }
 
 /* Scroll reveal triggers */
@@ -113,42 +119,9 @@ body {
     opacity: 1;
     transform: translateY(0);
 }
-
-/* Interactive Timeline Path */
-.timeline-dot::after {
-    content: '';
-    position: absolute;
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    background: #C8A96B;
-    left: -41px;
-    top: 5px;
-    box-shadow: 0 0 12px #C8A96B;
-    transition: all 0.3s ease;
-}
-
-.timeline-item:hover .timeline-dot::after {
-    transform: scale(1.4);
-    background: #fff;
-    box-shadow: 0 0 18px #fff;
-}
 </style>
 </head>
 <body class="relative min-h-screen">
-
-<!-- Custom Toast Notification System (Replaces alert) -->
-<div id="toast" class="fixed bottom-6 right-6 z-50 transform translate-y-20 opacity-0 transition-all duration-300 pointer-events-none">
-    <div class="glass border-gold/30 rounded-xl p-4 flex items-center gap-3 max-w-sm">
-        <div class="w-8 h-8 rounded-full bg-gold/10 flex items-center justify-center text-gold">
-            <i class="fa-solid fa-check"></i>
-        </div>
-        <div>
-            <p id="toast-title" class="font-bold text-xs text-white uppercase tracking-wider">System Action</p>
-            <p id="toast-msg" class="text-xs text-slate-400 mt-0.5">Success action successfully logged.</p>
-        </div>
-    </div>
-</div>
 
 <!-- Background elements -->
 <div class="absolute top-0 left-0 w-full h-[120vh] bg-grid pointer-events-none z-0"></div>
@@ -157,7 +130,7 @@ body {
 
 <!-- NAVIGATION BAR -->
 <nav class="fixed w-full z-50 bg-navy-950/70 backdrop-blur-md border-b border-white/5 transition-all duration-300" id="main-nav">
-    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+    <div class="max-w-[1600px] mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#home" class="group flex flex-col">
             <div class="font-black text-xl tracking-tight text-white group-hover:text-gold transition-colors">
                 SARAH RAHMAN
@@ -169,199 +142,261 @@ body {
         
         <!-- Desktop Nav -->
         <div class="hidden md:flex items-center space-x-8 text-xs tracking-wider uppercase font-bold text-slate-300">
-            <a href="#home" class="hover:text-gold transition-colors py-2 relative group">
-                Home
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#hospitality" class="hover:text-gold transition-colors py-2 relative group">
-                Hospitality
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#ecommerce" class="hover:text-gold transition-colors py-2 relative group">
-                E-Commerce
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#leadership" class="hover:text-gold transition-colors py-2 relative group">
-                Leadership Systems
-                <span class="absolute bottom-0 left-0 w-0 h-0.5 bg-gold transition-all duration-300 group-hover:w-full"></span>
-            </a>
-            <a href="#contact" class="bg-gold/10 hover:bg-gold hover:text-black border border-gold/30 px-4 py-2 rounded-lg transition-all duration-300 text-gold font-extrabold text-[11px] tracking-widest">
-                Connect
-            </a>
+            <a href="#home" class="hover:text-gold transition-colors py-2 relative group">Home</a>
+            <a href="#hospitality" class="hover:text-gold transition-colors py-2 relative group">Hospitality</a>
+            <a href="#ecommerce" class="hover:text-gold transition-colors py-2 relative group">E-Commerce</a>
+            <a href="#leadership" class="hover:text-gold transition-colors py-2 relative group">Systems &amp; Playbooks</a>
+            <a href="#contact" class="bg-gold/10 hover:bg-gold hover:text-black border border-gold/30 px-4 py-2 rounded-lg transition-all duration-300 text-gold font-extrabold text-[11px] tracking-widest">Connect</a>
         </div>
-        
-        <!-- Mobile menu toggle -->
-        <button class="md:hidden text-white hover:text-gold transition-colors focus:outline-none" onclick="toggleMobileNav()">
-            <i class="fa-solid fa-bars-staggered text-xl" id="menu-icon"></i>
-        </button>
-    </div>
-    
-    <!-- Mobile dropdown (hidden by default) -->
-    <div id="mobile-menu" class="hidden md:hidden border-t border-white/5 bg-navy-950/95 backdrop-blur-lg px-6 py-4 space-y-4 text-xs uppercase font-extrabold tracking-wider">
-        <a href="#home" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">Home</a>
-        <a href="#hospitality" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">Hospitality</a>
-        <a href="#ecommerce" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">E-Commerce</a>
-        <a href="#leadership" onclick="toggleMobileNav()" class="block py-2 text-slate-300 hover:text-gold">Leadership Systems</a>
-        <a href="#contact" onclick="toggleMobileNav()" class="block py-2 text-gold">Get In Touch</a>
     </div>
 </nav>
 
-<!-- HERO / DASHBOARD SECTION -->
-<section id="home" class="relative min-h-screen flex items-center pt-24 md:pt-12 overflow-hidden">
-    <div class="max-w-7xl mx-auto px-6 w-full z-10 relative">
-        <div class="grid lg:grid-cols-12 gap-12 items-center">
+<!-- HERO HEADER BLOCK -->
+<section id="home" class="relative pt-28 pb-4 overflow-hidden">
+    <div class="max-w-[1600px] mx-auto px-6 w-full z-10 relative">
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
             
-            <!-- Left Headline Block -->
-            <div class="lg:col-span-7 space-y-6 md:space-y-8">
-                <div class="inline-flex items-center gap-2 bg-gold/10 border border-gold/20 px-3 py-1.5 rounded-full text-[10px] uppercase font-black tracking-[0.25em] text-gold">
-                    <span class="w-1.5 h-1.5 rounded-full bg-gold animate-pulse glow-dot"></span>
-                    Hands-On Strategic Manager
+            <!-- Left Portrait Framework Asset -->
+            <div class="lg:col-span-2 w-full max-w-[180px] rounded-2xl border border-white/10 bg-zinc-900 overflow-hidden shrink-0 aspect-[4/5] relative group shadow-2xl flex items-center justify-center text-center p-4">
+                <div class="absolute inset-0 bg-gradient-to-br from-zinc-800 to-black flex flex-col items-center justify-center z-0">
+                    <i class="fa-solid fa-user-tie text-xl text-zinc-700 mb-1"></i>
+                    <span class="text-[8px] font-mono tracking-widest text-zinc-600 uppercase font-bold">images/profile.jpg</span>
                 </div>
-                
-                <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white leading-[1.1] font-sans">
-                    Transforming Data <br class="hidden md:block">
-                    Into <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-white italic font-serif">Scalable Revenue.</span>
-                </h1>
-                
-                <p class="text-slate-300 text-sm md:text-base leading-relaxed max-w-xl">
-                    Challenging platform biases, designing robust operational playbooks, and steering high-performance marketing structures with 6-figure budget efficiency.
-                </p>
-
-                <div class="flex flex-wrap gap-4">
-                    <a href="#hospitality" class="group bg-gradient-to-r from-gold to-gold-600 hover:from-white hover:to-white text-black px-6 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300 flex items-center gap-2 shadow-lg hover:shadow-gold/20 hover:scale-[1.02]">
-                        Explore Growth Cases
-                        <i class="fa-solid fa-arrow-right transition-transform group-hover:translate-x-1"></i>
-                    </a>
-                    <a href="#leadership" class="border border-white/10 hover:border-gold/40 px-6 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest text-slate-300 hover:text-white transition-all duration-300 bg-white/5 backdrop-blur-sm">
-                        Operating Systems
-                    </a>
-                </div>
+                <img src="images/profile.jpg" alt="Sarah Rahman" class="absolute inset-0 w-full h-full object-cover z-10 opacity-0 group-hover:scale-[1.02] transition-all duration-500" onload="this.style.opacity='1'">
             </div>
-
-            <!-- Right Interactive Dynamic Dashboard Block -->
-            <div class="lg:col-span-5 relative" id="hero-dashboard-container">
-                <div class="absolute -inset-1 rounded-[2.5rem] bg-gradient-to-tr from-gold/20 to-blue-500/20 blur-xl opacity-30"></div>
-                <div class="glass rounded-[2rem] p-6 md:p-8 relative overflow-hidden flex flex-col gap-6" id="parallax-card">
-                    
-                    <!-- Dashboard top-bar visual design -->
-                    <div class="flex justify-between items-center border-b border-white/5 pb-4">
-                        <div class="flex gap-1.5">
-                            <span class="w-3 h-3 rounded-full bg-red-500/50"></span>
-                            <span class="w-3 h-3 rounded-full bg-yellow-500/50"></span>
-                            <span class="w-3 h-3 rounded-full bg-green-500/50"></span>
-                        </div>
-                        <div class="text-[9px] font-mono text-slate-500 tracking-wider">LIVE_METRIC_ROUTER</div>
+            
+            <!-- Right Biography Text Framework -->
+            <div class="lg:col-span-10 space-y-6 flex flex-col justify-center min-h-[220px]">
+                <div class="space-y-4">
+                    <div class="inline-flex items-center bg-white/[0.03] border border-white/10 px-4 py-1 rounded-full text-[9px] uppercase font-black tracking-widest text-gold w-fit">
+                        Marketing Manager <span class="mx-2 text-white/30">•</span> Growth &amp; Performance
                     </div>
+                    <h1 class="text-3xl sm:text-4xl md:text-[45px] font-black tracking-tight text-white leading-[1.25] font-sans">
+                        Driving Growth Through <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-gold via-white to-white/70 italic font-serif">Marketing, Systems &amp; Leadership.</span>
+                    </h1>
+                    <p class="text-slate-400 text-xs md:text-sm leading-relaxed max-w-3xl font-light">
+                        Marketing Manager with 10+ years of experience leading growth initiatives, building operational systems, and managing high-performing teams to deliver measurable business impact.
+                    </p>
+                </div>
 
-                    <!-- Highlight Metrics Grid -->
-                    <div class="grid grid-cols-2 gap-4">
-                        <!-- Metric 1 -->
-                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
-                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">TikTok Growth</div>
-                            <div class="text-3xl font-black text-white mt-1 group-hover:scale-105 transition-transform origin-left">+3,700%</div>
-                            <div class="text-[8px] font-mono text-emerald-400 mt-1"><i class="fa-solid fa-chart-line"></i> cbgaesthetic.com</div>
+                <!-- Trusted Brands 6-Column Logo Container System -->
+                <div class="space-y-2 max-w-4xl">
+                    <span class="text-[8px] uppercase font-black tracking-[0.15em] text-slate-500 block pl-1">Trusted By Leading Brands</span>
+                    <div class="grid grid-cols-3 sm:grid-cols-6 gap-3 w-full bg-white/[0.01] border border-white/5 rounded-2xl p-3">
+                        <!-- Brand 1 Container -->
+                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
+                            <img src="images/logos/brand1.png" alt="Company Logo 1" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
+                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand1.png</span>
                         </div>
-                        <!-- Metric 2 -->
-                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
-                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">Mega Live ROI</div>
-                            <div class="text-3xl font-black text-gold mt-1 group-hover:scale-105 transition-transform origin-left">7.8x</div>
-                            <div class="text-[8px] font-mono text-gold-400 mt-1"><i class="fa-solid fa-bullseye"></i> 11.11 Single Session</div>
+                        <!-- Brand 2 Container -->
+                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
+                            <img src="images/logos/brand2.png" alt="Company Logo 2" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
+                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand2.png</span>
                         </div>
-                        <!-- Metric 3 -->
-                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
-                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">F&B Bookings</div>
-                            <div class="text-3xl font-black text-white mt-1 group-hover:scale-105 transition-transform origin-left">100%</div>
-                            <div class="text-[8px] font-mono text-emerald-400 mt-1"><i class="fa-solid fa-chair"></i> Dim Sum Capacity</div>
+                        <!-- Brand 3 Container -->
+                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
+                            <img src="images/logos/brand3.png" alt="Company Logo 3" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
+                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand3.png</span>
                         </div>
-                        <!-- Metric 4 -->
-                        <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 hover:border-gold/20 transition-all duration-300 group">
-                            <div class="text-[9px] font-bold text-slate-400 uppercase tracking-widest group-hover:text-gold transition-colors">Production Costs</div>
-                            <div class="text-3xl font-black text-slate-300 mt-1 group-hover:scale-105 transition-transform origin-left">-70%</div>
-                            <div class="text-[8px] font-mono text-rose-400 mt-1"><i class="fa-solid fa-arrow-down-wide-narrow"></i> In-house Strategy</div>
+                        <!-- Brand 4 Container -->
+                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
+                            <img src="images/logos/brand4.png" alt="Company Logo 4" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
+                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand4.png</span>
                         </div>
-                    </div>
-
-                    <!-- Custom Interactive SVG Sparkline Visualization -->
-                    <div class="bg-white/[0.01] border border-white/5 rounded-2xl p-4 flex flex-col gap-2">
-                        <div class="flex justify-between items-center text-[9px] uppercase tracking-widest text-slate-500 font-bold">
-                            <span>Dynamic Growth Velocity</span>
-                            <span class="text-gold">Scale Engine</span>
+                        <!-- Brand 5 Container -->
+                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
+                            <img src="images/logos/brand5.png" alt="Company Logo 5" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
+                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand5.png</span>
                         </div>
-                        <div class="h-16 w-full mt-1">
-                            <svg class="w-full h-full" viewBox="0 0 400 100" preserveAspectRatio="none">
-                                <defs>
-                                    <linearGradient id="glowGrad" x1="0" y1="0" x2="0" y2="1">
-                                        <stop offset="0%" stop-color="#C8A96B" stop-opacity="0.3"/>
-                                        <stop offset="100%" stop-color="#C8A96B" stop-opacity="0"/>
-                                    </linearGradient>
-                                </defs>
-                                <path d="M 0 80 Q 80 85 130 50 T 260 40 T 340 10 L 400 5 L 400 100 L 0 100 Z" fill="url(#glowGrad)" />
-                                <path d="M 0 80 Q 80 85 130 50 T 260 40 T 340 10 L 400 5" fill="none" stroke="#C8A96B" stroke-width="3" stroke-linecap="round" />
-                                <circle cx="400" cy="5" r="4" fill="#C8A96B" class="glow-dot" />
-                            </svg>
+                        <!-- Brand 6 Container -->
+                        <div class="h-12 border border-white/5 bg-black/40 rounded-xl flex flex-col items-center justify-center p-2 relative overflow-hidden group font-mono text-[8px] text-zinc-600">
+                            <img src="images/logos/brand6.png" alt="Company Logo 6" class="absolute inset-0 w-full h-full object-contain p-2 opacity-0 transition-opacity" onload="this.style.opacity='0.6'">
+                            <span class="group-hover:text-zinc-400 transition-colors uppercase font-bold tracking-wider">brand6.png</span>
                         </div>
                     </div>
                 </div>
-            </div>
 
+            </div>
         </div>
     </div>
 </section>
 
-<!-- THE EXECUTIVE SCOPE OF AUTHORITY (No skill bars section) -->
+<!-- THE CONNECTED EXECUTIVE DASHBOARD PANEL -->
+<section class="py-4 relative z-10">
+    <div class="max-w-[1600px] mx-auto px-6 w-full">
+        <div class="glass rounded-[24px] p-6 border-white/10 shadow-2xl bg-gradient-to-r from-navy-950 via-black/80 to-navy-950 flex flex-col space-y-5">
+            
+            <div class="flex justify-between items-center border-b border-white/5 pb-2">
+                <h2 class="text-[10px] uppercase font-black tracking-widest text-slate-400 flex items-center gap-1.5 font-mono">
+                    <i class="fa-solid fa-terminal text-gold animate-pulse"></i> LIVE_METRIC_ROUTER
+                </h2>
+                <div class="flex gap-1">
+                    <span class="w-1.5 h-1.5 rounded-full bg-rose-500/80"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-amber-500/80"></span>
+                    <span class="w-1.5 h-1.5 rounded-full bg-emerald-500/80"></span>
+                </div>
+            </div>
+
+            <!-- Full-Width 6-Column Performance Grid Array -->
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+                
+                <!-- Box 1: TikTok Growth -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
+                    <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">TikTok Growth</span>
+                    <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-sans">+3,700%</span></div>
+                    <div class="space-y-0.5">
+                        <span class="text-[9px] font-mono text-emerald-400 flex items-center gap-1"><i class="fa-solid fa-chart-line text-[8px] glow-green"></i> cbgaesthetic</span>
+                        <span class="text-[8px] text-slate-500 font-mono block tracking-tight">From baseline to 370K+ views</span>
+                    </div>
+                </div>
+                
+                <!-- Box 2: Max Track ROAS -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
+                    <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">Max Track ROAS</span>
+                    <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-gold tracking-tight font-sans">20.0x+</span></div>
+                    <div class="space-y-0.5">
+                        <span class="text-[9px] font-mono text-gold flex items-center gap-1"><i class="fa-solid fa-coins text-[8px]"></i> Core SKUs</span>
+                        <span class="text-[8px] text-slate-500 font-mono block tracking-tight">Marketplace campaign yield</span>
+                    </div>
+                </div>
+                
+                <!-- Box 3: F&B Paid Funnel Optimization -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
+                    <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">F&amp;B Paid Funnel</span>
+                    <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-sans">100%</span></div>
+                    <div class="space-y-0.5">
+                        <span class="text-[9px] font-mono text-cyan-400 flex items-center gap-1"><i class="fa-solid fa-circle-check text-[8px]"></i> Target Secured</span>
+                        <span class="text-[8px] text-slate-500 font-mono block tracking-tight">20+ Tables fully booked via Meta ads</span>
+                    </div>
+                </div>
+                
+                <!-- Box 4: Production Costs Reduction Analysis -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
+                    <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">Production Costs</span>
+                    <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-sans">-70%</span></div>
+                    <div class="space-y-0.5">
+                        <span class="text-[9px] font-mono text-rose-500 flex items-center gap-1"><i class="fa-solid fa-sliders text-[8px] glow-red"></i> In-house SOPs</span>
+                        <span class="text-[8px] text-slate-500 font-mono block tracking-tight">Slashed from 55K down to 16.6K THB</span>
+                    </div>
+                </div>
+
+                <!-- Box 5: Integrated Snapshot - Years Experience & Teams Led -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
+                    <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">Management Seniority</span>
+                    <div class="flex items-baseline gap-3 my-0.5">
+                        <div><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">10+</span><span class="text-[7px] text-slate-500 uppercase font-mono block tracking-tight">Years Exp</span></div>
+                        <div class="border-l border-white/10 pl-3"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">10</span><span class="text-[7px] text-slate-500 uppercase font-mono block tracking-tight">Team Led</span></div>
+                    </div>
+                    <span class="text-[8px] text-slate-400 font-mono block tracking-tight"><i class="fa-solid fa-user-shield text-[9px] text-gold mr-1"></i> Executive Leadership Matrix</span>
+                </div>
+
+                <!-- Box 6: Integrated Snapshot - Channels & Stakeholders -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
+                    <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">Operational Domain</span>
+                    <div class="flex items-baseline gap-3 my-0.5">
+                        <div><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">4</span><span class="text-[7px] text-slate-500 uppercase font-mono block tracking-tight">Industries</span></div>
+                        <div class="border-l border-white/10 pl-3"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight">100+</span><span class="text-[7px] text-slate-500 uppercase font-mono block tracking-tight">Campaigns</span></div>
+                        <div class="border-l border-white/10 pl-3"><span class="text-gold font-extrabold text-2xl lg:text-3xl tracking-tight">30+</span><span class="text-[7px] text-slate-500 uppercase font-mono block tracking-tight">Holders</span></div>
+                    </div>
+                    <span class="text-[8px] text-slate-400 font-mono block tracking-tight"><i class="fa-solid fa-bolt text-[9px] text-gold mr-1"></i> Cross-Functional Authority</span>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- AREAS OF IMPACT SHOWCASE -->
+<section class="py-4 relative z-10">
+    <div class="max-w-[1600px] mx-auto px-6 w-full">
+        <div class="space-y-3">
+            <div class="text-[9px] font-mono font-black uppercase tracking-widest text-slate-500 pl-1">Areas of Impact Blueprint</div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 w-full">
+                
+                <!-- Node 1: Team Leadership -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-5 flex gap-4 items-start hover:border-white/10 transition-colors">
+                    <div class="w-9 h-9 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-sm shrink-0"><i class="fa-solid fa-users-viewfinder"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="text-xs font-bold text-white tracking-wide">Team Leadership</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal font-light">Supervising in-house media, technical experts, and managing agency milestones.</p>
+                    </div>
+                </div>
+
+                <!-- Node 2: Revenue Growth -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-5 flex gap-4 items-start hover:border-white/10 transition-colors">
+                    <div class="w-9 h-9 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-sm shrink-0"><i class="fa-solid fa-chart-line"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="text-xs font-bold text-white tracking-wide">Revenue Growth</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal font-light">Precision multi-channel commercial distribution pipelines scaling brand GMV.</p>
+                    </div>
+                </div>
+
+                <!-- Node 3: Operational Systems -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-5 flex gap-4 items-start hover:border-white/10 transition-colors">
+                    <div class="w-9 h-9 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-sm shrink-0"><i class="fa-solid fa-gears"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="text-xs font-bold text-white tracking-wide">Operational Systems</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal font-light">Codifying internal workflow milestones into robust corporate standard SOPs.</p>
+                    </div>
+                </div>
+
+                <!-- Node 4: Digital Innovation -->
+                <div class="bg-white/[0.01] border border-white/5 rounded-xl p-5 flex gap-4 items-start hover:border-white/10 transition-colors">
+                    <div class="w-9 h-9 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-sm shrink-0"><i class="fa-solid fa-lightbulb"></i></div>
+                    <div class="space-y-1">
+                        <h4 class="text-xs font-bold text-white tracking-wide">Digital Innovation</h4>
+                        <p class="text-[11px] text-slate-400 leading-normal font-light">Deploying low-code stacks and AI-powered production engines safely.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- Action Panel Trigger Row -->
+        <div class="flex gap-4 mt-8 justify-start pl-1">
+            <a href="#hospitality" class="group bg-gradient-to-r from-gold to-gold-600 hover:from-white hover:to-white text-black px-6 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300 flex items-center gap-2 shadow-lg">
+                Explore Growth Cases <i class="fa-solid fa-arrow-right text-[11px] transition-transform group-hover:translate-x-0.5"></i>
+            </a>
+            <a href="#leadership" class="border border-white/10 hover:border-gold/30 px-6 py-3.5 rounded-xl text-xs font-black uppercase tracking-widest text-slate-300 hover:text-white transition-all bg-white/5">
+                View Systems &amp; Playbooks
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- THE EXECUTIVE SCOPE OF AUTHORITY -->
 <section class="py-24 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="grid lg:grid-cols-12 gap-12">
-            <!-- Left Info Block -->
             <div class="lg:col-span-4 space-y-4 md:sticky md:top-28 h-fit">
                 <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Authority Scope</span>
-                <h2 class="text-3xl font-black text-white">How Executive Skill Is Quantified</h2>
-                <p class="text-slate-400 text-sm leading-relaxed">
-                    Rejecting juvenile percentage bars. Managers demonstrate leadership parameters through capital efficiency, scale velocity, systemized playbooks, and stakeholder orchestration.
+                <h2 class="text-3xl font-black text-white">Quantifying Operational Impact</h2>
+                <p class="text-slate-400 text-sm leading-relaxed font-light">
+                    Leadership is demonstrated through business impact, operational excellence, strategic decision-making, and the ability to scale systems that drive measurable growth.
                 </p>
             </div>
             
-            <!-- Right 2x2 Grid Authority Metrics -->
             <div class="lg:col-span-8 grid sm:grid-cols-2 gap-6">
-                <!-- Box 1 -->
                 <div class="glass p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
-                        <i class="fa-solid fa-users-gear text-lg"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">People &amp; Matrix Leadership</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Direct ownership of 10-person Marcom team while harmoniously mobilizing cross-functional operations of 30+ stakeholders (Executive Chefs, Service Staff, and Operations Managers) and outsourced partners.
-                    </p>
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20"><i class="fa-solid fa-users-gear text-lg"></i></div>
+                    <h3 class="text-lg font-bold text-white">Team Leadership &amp; Stakeholder Management</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Led and supervised a 10-person marketing and content production team while seamlessly coordinating operations with internal departments, culinary heads, external agencies, and senior stakeholders.</p>
                 </div>
-                <!-- Box 2 -->
                 <div class="glass p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
-                        <i class="fa-solid fa-chart-line text-lg"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Capital Efficiency &amp; Scale</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Precision administration of 6-figure monthly budgets. Harnessing real-time trend feedback loops to transition ad capital towards high-converting SKU targets instantly.
-                    </p>
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20"><i class="fa-solid fa-chart-line text-lg"></i></div>
+                    <h3 class="text-lg font-bold text-white">Business Growth &amp; Resource Allocation</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Precision administration of multi-channel advertising budgets. Harnessing structural customer acquisition frameworks to maximize distribution velocity and optimize organizational capital efficiency.</p>
                 </div>
-                <!-- Box 3 -->
                 <div class="glass p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
-                        <i class="fa-solid fa-file-shield text-lg"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Operational Playbook Design</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Standardizing high-performance milestones into corporate SOP assets. Codifying sales script optimizations, chat conversion structures, and system routing logic.
-                    </p>
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20"><i class="fa-solid fa-file-shield text-lg"></i></div>
+                    <h3 class="text-lg font-bold text-white">Operational Excellence &amp; Process Design</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Codifying functional milestones into reproducible corporate SOP assets. Streamlining internal cross-departmental content workflows, performance reporting systems, and lead-generation funnels.</p>
                 </div>
-                <!-- Box 4 -->
                 <div class="glass p-6 rounded-2xl space-y-4">
-                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20">
-                        <i class="fa-solid fa-network-wired text-lg"></i>
-                    </div>
-                    <h3 class="text-lg font-bold text-white">Hybrid Growth Formula</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Synergizing Technical SEO keyword analysis, detailed store decoration (CRO), and short-format UGC video algorithms to generate 20+ campaign ROI structures.
-                    </p>
+                    <div class="w-10 h-10 rounded-xl bg-gold/10 flex items-center justify-center text-gold border border-gold/20"><i class="fa-solid fa-wand-magic-sparkles text-lg"></i></div>
+                    <h3 class="text-lg font-bold text-white">Innovation, AI &amp; Digital Transformation</h3>
+                    <p class="text-xs text-slate-400 leading-relaxed font-light">Deploying automated AI-powered image production pipelines and low-code native website infrastructure to accelerate deployment speed while stringently maintaining premium brand integrity.</p>
                 </div>
             </div>
         </div>
@@ -370,260 +405,330 @@ body {
 
 <!-- TIMELINE JOURNAL SECTION -->
 <section class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
-    <div class="max-w-4xl mx-auto px-6">
-        <div class="text-center space-y-2 mb-16">
-            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Career Evolution</span>
-            <h2 class="text-3xl font-black text-white">The Career Velocity</h2>
+    <div class="max-w-5xl mx-auto px-6 space-y-12">
+        <div class="text-center space-y-2">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Career Evolution Blueprint</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">The Executive Competency Velocity</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Demonstrating structured advancement in management scale, system ownership, and brand authority.</p>
         </div>
         
-        <div class="border-l-2 border-gold/20 pl-8 space-y-10 relative">
-            <!-- Timeline Item 1 -->
-            <div class="timeline-item relative reveal">
-                <div class="timeline-dot"></div>
-                <div class="glass p-6 rounded-2xl space-y-2">
-                    <div class="flex justify-between items-center flex-wrap gap-2">
-                        <h3 class="text-lg font-black text-white">Growth &amp; Performance Manager</h3>
-                        <span class="text-[10px] bg-gold/10 text-gold border border-gold/20 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">Today</span>
+        <div class="space-y-6">
+            <!-- Milestone 1: Chatrium (Hospitality Hotel) -->
+            <div class="glass rounded-2xl overflow-hidden border-gold/20 reveal">
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
+                        <div class="space-y-1.5">
+                            <h3 class="text-2xl font-black text-white tracking-tight font-sans">Marketing Communications Executive</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <p class="text-xs text-slate-400 font-bold tracking-wide uppercase flex items-center gap-2"><i class="fa-solid fa-hotel text-gold"></i> Chatrium Hospitality</p>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-gold/10 text-gold border border-gold/20 px-2.5 py-0.5 rounded-full">Strategic &amp; Management Level</span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 font-medium ml-auto md:pt-1">May 2025 - Nov 2025</span>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Orchestrating digital strategy architecture, matrix cross-collaborations, high-performing SOP playbook scaling, and multi-channel campaign budget deployment.
-                    </p>
+                    <div>
+                        <button onclick="toggleSTAR('timeline-chatrium')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Review Core Ownership &amp; METRICS</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-chatrium"></i>
+                        </button>
+                        <div id="star-timeline-chatrium" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
+                                <li>Drove <strong class="text-white">+63.93% sales revenue growth</strong> and achieved a premium <strong class="text-gold">7.8 ROI</strong> during the 11.11 Mega Campaign via integrated live commerce workflows.</li>
+                                <li>Owned end-to-end multi-channel campaign strategy and operational execution across luxury hotel properties.</li>
+                                <li>Achieved a flawless <strong class="text-white">100% booking rate</strong> for the "Silver Economy" segment while stringently maintaining premium brand standards.</li>
+                                <li>Slashed content execution bottlenecks by architecting and supervising an agile, high-efficiency in-house production system.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 2 -->
-            <div class="timeline-item relative reveal">
-                <div class="timeline-dot"></div>
-                <div class="glass p-6 rounded-2xl space-y-2">
-                    <div class="flex justify-between items-center flex-wrap gap-2">
-                        <h3 class="text-lg font-bold text-slate-200">Marketing Communications Executive</h3>
-                        <span class="text-[10px] bg-white/5 text-slate-400 border border-white/10 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">2025</span>
+
+            <!-- Milestone 2: CBG Devices (Beauty Gadgets) -->
+            <div class="glass rounded-2xl overflow-hidden reveal">
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
+                        <div class="space-y-1.5">
+                            <h3 class="text-2xl font-black text-slate-200 tracking-tight font-sans">Senior Digital Marketing</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <p class="text-xs text-slate-400 font-bold tracking-wide uppercase flex items-center gap-2"><i class="fa-solid fa-wand-magic-sparkles text-gold"></i> CBG Devices (Beauty Gadgets)</p>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-white/5 text-slate-400 border border-white/10 px-2.5 py-0.5 rounded-full">Performance &amp; Execution Level</span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 font-medium ml-auto md:pt-1">Jun 2022 - Aug 2024</span>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Led omnichannel brand alignments, luxury campaign architectures, and digital-to-operational flow coordination for hospitality portfolios.
-                    </p>
+                    <div>
+                        <button onclick="toggleSTAR('timeline-cbg')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Review Core Ownership &amp; METRICS</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-cbg"></i>
+                        </button>
+                        <div id="star-timeline-cbg" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
+                                <li>Directed marketplace e-commerce performance engineering, delivering consistent campaign returns of <strong class="text-white">20.0+ ROAS (ROI)</strong> across Shopee and Lazada.</li>
+                                <li>Rescued and revitalized an underperforming IPL Hair Removal product category, propelling it to <strong class="text-gold">#2 Best Seller</strong> rank via aggressive repositioning.</li>
+                                <li>Pioneered an organic channel-disruption strategy using the X (Twitter) product review ecosystem, securing the <strong class="text-white">#1 Category Ranking</strong> for Electric Guasha.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 3 -->
-            <div class="timeline-item relative reveal">
-                <div class="timeline-dot"></div>
-                <div class="glass p-6 rounded-2xl space-y-2">
-                    <div class="flex justify-between items-center flex-wrap gap-2">
-                        <h3 class="text-lg font-bold text-slate-200">Senior Digital Marketing</h3>
-                        <span class="text-[10px] bg-white/5 text-slate-400 border border-white/10 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">2022</span>
+
+            <!-- Milestone 3: Commy Corporation (Mobile Gadgets) -->
+            <div class="glass rounded-2xl overflow-hidden reveal">
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
+                        <div class="space-y-1.5">
+                            <h3 class="text-2xl font-black text-slate-300 tracking-tight font-sans">Digital Marketing Specialist</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <p class="text-xs text-slate-400 font-bold tracking-wide uppercase flex items-center gap-2"><i class="fa-solid text-slate-400 fa-mobile-screen-button"></i> Commy Corporation (Mobile Gadgets)</p>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-white/5 text-slate-400 border border-white/10 px-2.5 py-0.5 rounded-full">Pipeline &amp; Optimization Level</span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 font-medium ml-auto md:pt-1">Jul 2020 - Dec 2021</span>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Coordinated paid-traffic campaign engines, custom A/B testing implementations, SEO performance mapping, and high-yield e-commerce optimizations.
-                    </p>
+                    <div>
+                        <button onclick="toggleSTAR('timeline-commy')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Review Core Ownership &amp; METRICS</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-commy"></i>
+                        </button>
+                        <div id="star-timeline-commy" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
+                                <li>Formulated and executed cross-channel integrated digital marketing systems and CRM initiatives to accelerate commercial B2B/B2C acquisition.</li>
+                                <li>Harnessed corporate audience data insights and behavioral analytics tracking parameters to optimize dynamic ad conversions.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <!-- Timeline Item 4 -->
-            <div class="timeline-item relative reveal">
-                <div class="timeline-dot"></div>
-                <div class="glass p-6 rounded-2xl space-y-2">
-                    <div class="flex justify-between items-center flex-wrap gap-2">
-                        <h3 class="text-lg font-bold text-slate-300">Digital Marketing Specialist &amp; Content Journalist</h3>
-                        <span class="text-[10px] bg-white/5 text-slate-400 border border-white/10 px-2.5 py-1 rounded-full font-black uppercase tracking-wider">2020 - 2021</span>
+
+            <!-- Milestone 4: ARIP (Business Plus) -->
+            <div class="glass rounded-2xl overflow-hidden reveal">
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
+                        <div class="space-y-1.5">
+                            <h3 class="text-2xl font-black text-slate-300 tracking-tight font-sans">Online Content Creator &amp; Journalist</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <p class="text-xs text-slate-400 font-bold tracking-wide uppercase flex items-center gap-2"><i class="fa-solid text-slate-400 fa-magnifying-glass-chart"></i> ARIP (Business Plus Analysis)</p>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-white/5 text-slate-400 border border-white/10 px-2.5 py-0.5 rounded-full">Editorial &amp; Media Engine Level</span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 font-medium ml-auto md:pt-1">May 2017 - Feb 2020</span>
                     </div>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Synthesized structured content directions with programmatic trends. Managed audience targeting logic and digital content pipeline assets.
-                    </p>
+                    <div>
+                        <button onclick="toggleSTAR('timeline-arip')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Review Core Ownership &amp; METRICS</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-arip"></i>
+                        </button>
+                        <div id="star-timeline-arip" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
+                                <li>Produced high-ranking, SEO-driven structured copy layouts and generated thorough quantitative market trend evaluations covering tech and media sectors.</li>
+                                <li>Mapped out scalable multi-platform digital editorial frameworks to maximize organic channel traffic routing and retention metrics.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milestone 5: Channel 8 (Online News) -->
+            <div class="glass rounded-2xl overflow-hidden reveal">
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
+                        <div class="space-y-1.5">
+                            <h3 class="text-2xl font-black text-slate-300 tracking-tight font-sans">Online News Content Specialist</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <p class="text-xs text-slate-400 font-bold tracking-wide uppercase flex items-center gap-2"><i class="fa-solid text-slate-400 fa-globe"></i> Channel 8 (Digital News Media)</p>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-white/5 text-slate-400 border border-white/10 px-2.5 py-0.5 rounded-full">Digital News Platform Engine</span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 font-medium ml-auto md:pt-1">Feb 2017 - May 2017</span>
+                    </div>
+                    <div>
+                        <button onclick="toggleSTAR('timeline-ch8')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Review Core Ownership &amp; METRICS</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-ch8"></i>
+                        </button>
+                        <div id="star-timeline-ch8" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
+                                <li>Strategized and launched rapid online news syndication layouts to capture viral organic traffic surges.</li>
+                                <li>Analyzed live audience engagement trends to iterate format parameters and maximize multi-platform community growth.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Milestone 6: Channel 3 (Mass Media News Editing) -->
+            <div class="glass rounded-2xl overflow-hidden reveal">
+                <div class="p-6 md:p-8 space-y-6">
+                    <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
+                        <div class="space-y-1.5">
+                            <h3 class="text-2xl font-black text-slate-300 tracking-tight font-sans">Video Editor (News Division)</h3>
+                            <div class="flex flex-wrap items-center gap-3">
+                                <p class="text-xs text-slate-400 font-bold tracking-wide uppercase flex items-center gap-2"><i class="fa-solid text-slate-400 fa-clapperboard"></i> Channel 3 (Mass Media Network)</p>
+                                <span class="text-[9px] font-mono font-bold uppercase bg-white/5 text-slate-400 border border-white/10 px-2.5 py-0.5 rounded-full">Content Production Foundation Level</span>
+                            </div>
+                        </div>
+                        <span class="text-[11px] font-mono text-slate-500 font-medium ml-auto md:pt-1">May 2013 - Feb 2017</span>
+                    </div>
+                    <div>
+                        <button onclick="toggleSTAR('timeline-ch3')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Review Core Ownership &amp; METRICS</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-ch3"></i>
+                        </button>
+                        <div id="star-timeline-ch3" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
+                                <li>Delivered premium broadcast-level television network content under exceptionally tight, high-pressure deadlines for nationwide media syndication.</li>
+                                <li>Established internal post-production standard operating procedures (SOPs) for visual storytelling cadence, audio balancing, and premium rendering execution.</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
 </section>
 
-<!-- CASE STUDY: HOSPITALITY GROWTH -->
+<!-- CASE STUDY: HOSPITALITY & E-COMMERCE -->
 <section id="hospitality" class="py-24 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center space-y-2 mb-16">
-            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Vertical 01: Hospitality</span>
-            <h2 class="text-4xl font-black text-white tracking-tight">Hospitality Omnichannel Growth</h2>
-            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Re-engineering standard booking cycles and restructuring legacy target audience demographics.</p>
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Growth Case Studies</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">Enterprise Scale Achievements</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Re-engineering standard conversion cycles and restructuring channel strategy across key sectors.</p>
         </div>
 
         <div class="grid lg:grid-cols-2 gap-10">
-            <!-- Campaign Item 1: 11.11 Mega Live -->
-            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
-                <!-- High-fidelity Mockup Visual for Live Commerce -->
-                <div class="h-64 bg-gradient-to-br from-navy-900 to-navy-950 relative overflow-hidden p-6 flex flex-col justify-between border-b border-white/5">
-                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,rgba(200,169,107,0.1),transparent)] pointer-events-none"></div>
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2">
-                            <span class="w-2.5 h-2.5 rounded-full bg-red-500 animate-pulse glow-dot"></span>
-                            <span class="text-[10px] font-mono text-slate-400 tracking-wider">LIVE_BROADCAST_SYSTEM</span>
-                        </div>
-                        <span class="text-[9px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded font-mono">ACTIVE PIPELINE</span>
+            <!-- Case Study 1: Hospitality Integrated Session -->
+            <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
+                <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
+                        [images/cases/hospitality-1111.jpg]
+                        <img src="images/cases/hospitality-1111.jpg" alt="11.11 Luxury Room Package" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:scale-105 transition-all duration-700" onload="this.style.opacity='0.8'">
                     </div>
-                    
-                    <!-- Simulating the video visual layout with CSS -->
-                    <div class="flex gap-4 items-center my-auto">
-                        <div class="w-16 h-16 rounded-full border-2 border-gold flex items-center justify-center bg-navy-950 shrink-0 relative">
-                            <i class="fa-solid fa-microphone-lines text-gold text-xl"></i>
-                            <span class="absolute bottom-0 right-0 bg-red-600 text-[8px] font-black px-1 rounded-full text-white">LIVE</span>
-                        </div>
-                        <div class="space-y-1">
-                            <div class="text-xs font-bold text-white">11.11 Luxury Room &amp; Buffet Package</div>
-                            <div class="text-[10px] text-slate-400 flex items-center gap-1.5">
-                                <i class="fa-solid fa-users text-gold"></i> 4,120 Watching
-                                <span class="text-slate-600">|</span>
-                                <i class="fa-solid fa-clock text-slate-500"></i> In-house Hosts (No Agency MC)
-                            </div>
-                            <div class="flex gap-2 pt-1">
-                                <span class="text-[8px] bg-white/5 border border-white/10 px-2 py-0.5 rounded text-slate-300">Direct Trust Optimization</span>
-                                <span class="text-[8px] bg-gold/10 border border-gold/20 px-2 py-0.5 rounded text-gold">-70% Production Cost</span>
-                            </div>
-                        </div>
+                    <div class="w-full flex justify-between items-center z-10 relative">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse glow-red"></span> LIVE_BROADCAST_SYSTEM
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 font-mono text-[9px] font-bold text-emerald-400 uppercase tracking-wider">
+                            Live In Production System
+                        </span>
                     </div>
-
-                    <div class="flex justify-between items-end">
-                        <div class="text-xs">
-                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Campaign Velocity</div>
-                            <div class="text-lg font-black text-white">+63.93% Sales</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10 pointer-events-none z-10"></div>
+                    <div class="w-full grid grid-cols-12 gap-2 items-end z-20 relative pt-16">
+                        <div class="col-span-8 space-y-1">
+                            <h2 class="text-3xl md:text-4xl font-black text-white tracking-tighter leading-none font-sans">
+                                11.11 <span class="text-sm tracking-[0.15em] uppercase font-bold text-slate-200 block mt-1">End-of-Year Exclusive</span>
+                            </h2>
                         </div>
-                        <div class="text-xs text-right">
-                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Campaign Yield</div>
-                            <div class="text-lg font-black text-gold">7.8 ROI</div>
+                        <div class="col-span-4 flex justify-end">
+                            <div class="w-16 h-16 md:w-20 md:h-20 rounded-full border-2 border-white/20 bg-zinc-800 shadow-xl overflow-hidden relative flex items-center justify-center font-mono text-[8px] text-zinc-500 text-center">
+                                [images/hosts/internal-mc.jpg]
+                                <img src="images/hosts/internal-mc.jpg" alt="Internal MC" class="absolute inset-0 w-full h-full object-cover opacity-0" onload="this.style.opacity='1'">
+                            </div>
                         </div>
                     </div>
                 </div>
-
-                <!-- Strategic Narrative and Expandable Strategy -->
-                <div class="p-8 space-y-4 flex-grow flex flex-col justify-between">
-                    <div class="space-y-2">
-                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Process Simplification</span>
-                        <h3 class="text-2xl font-bold text-white">11.11 Mega Campaign Live Commerce</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Consolidated segmented room and food &amp; beverage live broadcasts into a unified, high-performing "Single Live Session". Built long-term organizational trust by scaling in-house operations.
-                        </p>
+                <div class="bg-navy-900/60 backdrop-blur-sm border-b border-white/5 p-5 md:p-6 space-y-6 z-20 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full border border-rose-500/30 flex items-center justify-center bg-rose-500/10 text-rose-400 relative">
+                            <i class="fa-solid fa-microphone text-sm"></i>
+                            <span class="absolute bottom-0 right-0 px-1 py-0.5 rounded bg-rose-600 text-white font-mono text-[7px] font-black leading-none">LIVE</span>
+                        </div>
+                        <div class="space-y-0.5">
+                            <h4 class="text-xs font-bold text-white uppercase tracking-wider">11.11 Luxury Room &amp; Buffet Package</h4>
+                            <div class="flex items-center gap-3 text-[10px] text-slate-400 font-mono">
+                                <span><i class="fa-solid fa-users text-slate-500 mr-1"></i> 277K Views</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-user-shield text-slate-500 mr-1"></i> Internal Staff MCs</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Accordion Dropdown Trigger -->
+                    <div class="flex flex-wrap gap-2 text-[9px] font-mono font-bold">
+                        <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-slate-300">Direct Trust Optimization</span>
+                        <span class="bg-rose-500/10 border border-rose-500/20 px-2.5 py-1 rounded text-rose-400">-69.75% Production Cost</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 border-t border-white/5 pt-4">
+                        <div><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">Campaign Velocity</span><span class="text-xl font-black text-white tracking-tight">+63.93% Sales</span></div>
+                        <div class="text-right"><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">Campaign Yield</span><span class="text-xl font-black text-gold tracking-tight">7.8 ROI</span></div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 space-y-4 flex-grow flex flex-col justify-between bg-navy-950">
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">Process Simplification</span>
+                        <h3 class="text-xl font-bold text-white tracking-tight">11.11 Mega Campaign Live Commerce</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Consolidated segmented room packages and F&amp;B offerings into a unified, high-performing "Single Live Session". Built long-term organizational value by scaling highly specialized in-house production systems.</p>
+                    </div>
                     <div class="pt-4 border-t border-white/5">
                         <button onclick="toggleSTAR('hospitality-01')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
-                            <span>Read Deep-Dive Strategy</span>
-                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-hospitality-01"></i>
+                            <span>Read Deep-Dive Strategy</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-hospitality-01"></i>
                         </button>
-                        
-                        <!-- STAR Breakdown (Collapsed by default) -->
-                        <div id="star-hospitality-01" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">Legacy live streams were severely fractured between room sales and restaurant buffets. Relied heavily on expensive external agencies and actors, reducing profitability.</p>
-                                </div>
-                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">Consolidate multi-channel operations into a single streaming strategy, reduce high agency markup fees, and optimize absolute transaction ROI.</p>
-                                </div>
+                        <div id="star-hospitality-01" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs font-light">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Legacy live streams were severely fractured between room sales and restaurant buffets. Relied heavily on expensive external agencies, reducing overall margins.</p></div>
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4><p class="text-slate-400 leading-relaxed text-[11px]">Consolidate multi-channel operations into a single streaming strategy, optimize corporate execution speeds, and maximize absolute transactional ROI.</p></div>
                             </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">
-                                    Architected the "Single Live Session" matrix layout. Championed trust-focused brand representation by training and deploying key internal staff as broadcasting hosts. Directly engineered system integrations, stream pacing structures, and real-time transaction processing.
-                                </p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
-                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">
-                                    Drove production spending down by 70% while elevating global transaction volumes by +63.93%, resulting in a premium 7.8 Campaign ROI output.
-                                </p>
-                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Architected a centralized live session scheduling layout. Empowered brand loyalty by training and deploying key internal hotel team members as broadcasting hosts.</p></div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4><p class="text-slate-300 font-bold leading-relaxed text-[11px]">Substantially elevated transaction volumes by +63.93% and maximized resource efficiency, resulting in a premium 7.8 Campaign Live ROI output.</p></div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Campaign Item 2: Dim Sum Buffet -->
-            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
-                <!-- High-fidelity Mockup Visual for A/B Testing & Demographics -->
-                <div class="h-64 bg-gradient-to-br from-navy-900 to-navy-950 relative overflow-hidden p-6 flex flex-col justify-between border-b border-white/5">
-                    <div class="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,rgba(200,169,107,0.08),transparent)] pointer-events-none"></div>
-                    
-                    <div class="flex justify-between items-center">
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-users-viewfinder text-gold text-xs"></i>
-                            <span class="text-[10px] font-mono text-slate-400 tracking-wider">A/B_DEMOGRAPHIC_MAPPING</span>
-                        </div>
-                        <span class="text-[9px] bg-amber-500/10 text-amber-400 border border-amber-500/20 px-2 py-0.5 rounded font-mono">RE-TARGET ACTIVE</span>
+            <!-- Case Study 2: E-Commerce Channel Pivot -->
+            <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
+                <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
+                    <div class="absolute inset-0 bg-gradient-to-br from-black to-zinc-900 z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
+                        [images/cases/beauty-pivot.jpg]
+                        <img src="images/cases/beauty-pivot.jpg" alt="TikTok Shop Revenue Domination" class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:scale-105 transition-all duration-700" onload="this.style.opacity='0.8'">
                     </div>
-
-                    <!-- Simulating visual graphics for target demographics -->
-                    <div class="grid grid-cols-2 gap-4 items-center my-auto">
-                        <!-- Demographics visual representation -->
-                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-2">
-                            <div class="text-[8px] text-slate-500 uppercase tracking-widest font-black">Identified Target</div>
-                            <div class="flex items-center gap-1.5">
-                                <i class="fa-solid fa-user-check text-gold text-xs"></i>
-                                <span class="text-xs font-bold text-white">Active Seniors</span>
-                            </div>
-                            <div class="text-[9px] text-emerald-400 font-mono">Age Range: 45 - 60+</div>
-                        </div>
-                        
-                        <!-- Design optimizations visual -->
-                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-2">
-                            <div class="text-[8px] text-slate-500 uppercase tracking-widest font-black">UX Refinements</div>
-                            <div class="text-[10px] text-slate-300 font-bold flex items-center gap-1">
-                                <i class="fa-solid fa-magnifying-glass-plus text-gold"></i> Size +200%
-                            </div>
-                            <div class="text-[8px] text-slate-400">High contrast legibility layout</div>
-                        </div>
+                    <div class="w-full flex justify-between items-center z-10 relative">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse glow-red"></span> CONVERSION_TUNNEL_ROUTER
+                        </span>
+                        <span class="inline-flex items-center px-3 py-1 rounded-md bg-emerald-500/10 backdrop-blur-md border border-emerald-500/20 font-mono text-[9px] font-bold text-emerald-400 uppercase tracking-wider">
+                            Live In Production System
+                        </span>
                     </div>
-
-                    <div class="flex justify-between items-end border-t border-white/5 pt-3">
-                        <div>
-                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Daily Reservations</div>
-                            <div class="text-sm font-bold text-white"><i class="fa-solid fa-calendar-check text-gold"></i> Fully Booked</div>
-                        </div>
-                        <div class="text-right">
-                            <div class="text-slate-500 text-[8px] uppercase tracking-wider">Capacity Scaling</div>
-                            <div class="text-sm font-extrabold text-gold">40 Tables Reserved Daily</div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10 pointer-events-none z-10"></div>
+                    <div class="w-full z-20 relative pt-16">
+                        <div class="space-y-1">
+                            <h2 class="text-3xl md:text-4xl font-black text-white tracking-tighter leading-none font-sans">
+                                CBG Devices <span class="text-sm tracking-[0.15em] uppercase font-bold text-slate-200 block mt-1">TikTok Shop Revenue Domination</span>
+                            </h2>
                         </div>
                     </div>
                 </div>
-
-                <!-- Strategic Narrative and Expandable Strategy -->
-                <div class="p-8 space-y-4 flex-grow flex flex-col justify-between">
-                    <div class="space-y-2">
-                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Demographic Pivot Strategy</span>
-                        <h3 class="text-2xl font-bold text-white">The Weekday Dim Sum Buffet Turnaround</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Defied traditional weekday dining campaign standards. Discovered and focused on niche age groups by restructuring digital marketing pathways.
-                        </p>
+                <div class="bg-navy-900/60 backdrop-blur-sm border-b border-white/5 p-5 md:p-6 space-y-6 z-20 relative">
+                    <div class="flex items-center gap-4">
+                        <div class="w-12 h-12 rounded-full border border-emerald-500/30 flex items-center justify-center bg-emerald-500/10 text-emerald-400"><i class="fa-solid fa-basket-shopping text-sm"></i></div>
+                        <div class="space-y-0.5">
+                            <h4 class="text-xs font-bold text-white uppercase tracking-wider">Premium Beauty Gadget Category Pivot</h4>
+                            <div class="flex items-center gap-3 text-[10px] text-slate-400 font-mono">
+                                <span><i class="fa-solid fa-chart-pie text-slate-500 mr-1"></i> Algorithm Hook</span>
+                                <span>•</span>
+                                <span><i class="fa-solid fa-bolt text-slate-500 mr-1"></i> Paid Social Scaling</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <!-- Accordion Dropdown Trigger -->
+                    <div class="flex flex-wrap gap-2 text-[9px] font-mono font-bold">
+                        <span class="bg-white/5 border border-white/10 px-2.5 py-1 rounded text-slate-300">Clinical Creative Briefing</span>
+                        <span class="bg-emerald-500/10 border border-emerald-500/20 px-2.5 py-1 rounded text-emerald-400">#2 Best Seller Unlock</span>
+                    </div>
+                    <div class="grid grid-cols-2 gap-4 border-t border-white/5 pt-4">
+                        <div><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">Campaign Velocity</span><span class="text-xl font-black text-white tracking-tight">1.3M+ Monthly GMV</span></div>
+                        <div class="text-right"><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">Campaign Yield</span><span class="text-xl font-black text-emerald-400 tracking-tight">20.0x+ ROAS</span></div>
+                    </div>
+                </div>
+                <div class="p-6 md:p-8 space-y-4 flex-grow flex flex-col justify-between bg-navy-950">
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">Platform Adaptation</span>
+                        <h3 class="text-xl font-bold text-white tracking-tight">TikTok Shop Revenue Domination</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Challenged standard internal preconceptions regarding price constraints. Designed and deployed high-fidelity clinical and aesthetic creative assets to scale premium category revenues.</p>
+                    </div>
                     <div class="pt-4 border-t border-white/5">
-                        <button onclick="toggleSTAR('hospitality-02')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
-                            <span>Read Deep-Dive Strategy</span>
-                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-hospitality-02"></i>
+                        <button onclick="toggleSTAR('ecommerce-01')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
+                            <span>Read Strategy</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-01"></i>
                         </button>
-                        
-                        <!-- STAR Breakdown (Collapsed by default) -->
-                        <div id="star-hospitality-02" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs">
-                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">Weekday restaurant dining metrics were underperforming. Legacy systems targeted generic young demographics with low weekday availability.</p>
-                                </div>
-                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                    <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4>
-                                    <p class="text-slate-400 leading-relaxed text-[11px]">Identify high-intent demographic markets capable of filling dining capacities consistently on weekday schedules.</p>
-                                </div>
+                        <div id="star-ecommerce-01" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs font-light">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Stakeholders assumed higher-tier beauty devices could not sell efficiently via short-video channels, classifying the audience as exclusively budget-focused.</p></div>
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4><p class="text-slate-400 leading-relaxed text-[11px]">Construct an alternative premium acquisition path to unlock scalably high e-commerce margins on short-form visual networks.</p></div>
                             </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">
-                                    Orchestrated strict digital A/B testing and tracked messenger inquiries, revealing senior demographics (Ages 45-60+) as top buyers. Negotiated menu alignments directly with culinary leaders, enlarged font styles on key creatives, and deployed high-performance conversion scripts for the sales team.
-                                </p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
-                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">
-                                    Transformed empty tables into a consistent reservation funnel, generating a booked capacity of over 40 dining tables per day.
-                                </p>
-                            </div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Engineered video blueprints focusing directly on medical specs. Collaborated with a matrix of high-conversion macro and micro creators, shifting media budget allocations dynamically to winning ad hooks.</p></div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4><p class="text-slate-300 font-bold leading-relaxed text-[11px]">Propelled product line sales from 34K to over 1.3 Million THB monthly, permanently outperforming traditional legacy e-commerce channels.</p></div>
                         </div>
                     </div>
                 </div>
@@ -632,323 +737,216 @@ body {
     </div>
 </section>
 
-<!-- CASE STUDY: E-COMMERCE SCALING -->
+<!-- BRAND COLLABORATION & PERFORMANCE GRAPHICS SHOWCASE (Refreshed Minimalist Logo Grid) -->
 <section id="ecommerce" class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center space-y-2 mb-16">
-            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Vertical 02: E-Commerce</span>
-            <h2 class="text-4xl font-black text-white tracking-tight">E-Commerce Scaling &amp; Turnarounds</h2>
-            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Re-engineering platform methodologies and validating premium beauty devices on high-growth channels.</p>
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Corporate Endorsements</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">Brand Synergy Deployments</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Strategic brand alignments with market leaders alongside advanced performance reporting platforms.</p>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8">
-            <!-- Card 1: TikTok Domination -->
-            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
-                <!-- Visual Mockup for TikTok Graph -->
-                <div class="h-56 bg-gradient-to-b from-navy-900 to-navy-950 p-6 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
-                    <div class="flex justify-between items-center">
-                        <span class="text-[9px] font-mono text-slate-500 tracking-wider">TIKTOK_ALGORITHM_MAPPING</span>
-                        <span class="w-2.5 h-2.5 rounded-full bg-emerald-500 glow-dot"></span>
-                    </div>
-
-                    <!-- Custom CSS Graphic for scaling growth -->
-                    <div class="space-y-3 my-auto">
-                        <div class="flex justify-between text-xs text-slate-400">
-                            <span>Initial Yield (Jan)</span>
-                            <span class="text-white font-bold">34K THB</span>
-                        </div>
-                        <div class="relative w-full h-2 bg-white/5 rounded-full overflow-hidden">
-                            <div class="absolute top-0 left-0 h-full bg-gold rounded-full w-[10%]"></div>
-                        </div>
-                        <div class="flex justify-between text-xs text-slate-400 pt-1">
-                            <span>Final Scale (Dec)</span>
-                            <span class="text-gold font-black">1.3M THB</span>
-                        </div>
-                        <div class="relative w-full h-2.5 bg-white/5 rounded-full overflow-hidden">
-                            <div class="absolute top-0 left-0 h-full bg-gradient-to-r from-gold to-white rounded-full w-full animate-pulse"></div>
-                        </div>
-                    </div>
-
-                    <div class="text-[10px] text-slate-500 font-mono text-right font-bold">Yearly Scale: +3,700% YoY</div>
+        <div class="grid lg:grid-cols-12 gap-8 items-stretch">
+            
+            <!-- Left Panel: Brand Collaboration Luxury Logo Cards -->
+            <div class="lg:col-span-6 glass rounded-3xl p-6 flex flex-col justify-between space-y-6 reveal">
+                <div class="space-y-1">
+                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Co-Branding Strategic Showcases</span>
+                    <h3 class="text-xl font-bold text-white">Brand Synergy Deployments</h3>
+                    <p class="text-xs text-slate-400 font-light">Click on any brand partner node below to launch and review real-world promotional project visual frames.</p>
                 </div>
-
-                <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
-                    <div class="space-y-1.5">
-                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Platform Defiance</span>
-                        <h3 class="text-xl font-bold text-white">TikTok Shop Domination</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Overruled standard internal biases targeting cheap SKU sales. Executed and scaled premium aesthetic assets to win highly profitable transactions.
-                        </p>
-                    </div>
-
-                    <div class="pt-4 border-t border-white/5">
-                        <button onclick="toggleSTAR('ecommerce-01')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
-                            <span>Read Strategy</span>
-                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-01"></i>
-                        </button>
-                        
-                        <div id="star-ecommerce-01" class="hidden mt-3 pt-3 border-t border-white/5 space-y-3 text-xs">
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">Stakeholders assumed premium beauty devices could not sell on short-video media, labeling TikTok as exclusively lower-budget demographics.</p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">Challenged conventional practices. Designed video campaigns showcasing high-performance clinical aesthetics. Handpicked key premium KOL influencers and realigned weekly ad spend instantly to scale winning video hooks.</p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
-                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">Propelled sales from 34K to 1.3 Million THB monthly. Secured long-term e-commerce scaling dominance, permanently exceeding legacy platform channels.</p>
-                            </div>
+                <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
+                    
+                    <!-- Brand 1 Card: Laneige -->
+                    <button onclick="openCollabModal('laneige', 'LANEIGE X CBG Devices Collaboration', 'Water Sleeping Mask Campaign Bundle Set Activation Framework', 'images/collabs/laneige-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
+                            <img src="images/logos/laneige.png" alt="Laneige Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
+                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">LANEIGE</span>
                         </div>
-                    </div>
-                </div>
-            </div>
+                        <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
+                    </button>
 
-            <!-- Card 2: IPL Product Rescue -->
-            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
-                <!-- Visual Mockup for SEO/Spec Listing Overhaul -->
-                <div class="h-56 bg-gradient-to-b from-navy-900 to-navy-950 p-6 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
-                    <div class="flex justify-between items-center">
-                        <span class="text-[9px] font-mono text-slate-500 tracking-wider">LISTING_UX_CONVERSION</span>
-                        <span class="text-[9px] bg-gold/10 text-gold border border-gold/20 px-2 py-0.5 rounded font-mono">CRO REDESIGN</span>
-                    </div>
-
-                    <!-- Simulating the conversion change -->
-                    <div class="grid grid-cols-2 gap-3 items-center my-auto">
-                        <div class="bg-red-500/5 border border-red-500/10 p-2.5 rounded-xl space-y-1 text-center">
-                            <span class="text-[8px] text-slate-500 uppercase tracking-widest block">Legacy Specs</span>
-                            <span class="text-[9px] text-red-400 line-through">"Easy hair removal"</span>
+                    <!-- Brand 2 Card: Smooth-E -->
+                    <button onclick="openCollabModal('smooth-e', 'SMOOTH-E X CBG Devices Collaboration', 'Anti-Acne LED Facial Sync Launch Integrated Campaign Structure', 'images/collabs/smoothe-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
+                            <img src="images/logos/smoothe.png" alt="Smooth-E Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
+                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">SMOOTH-E</span>
                         </div>
-                        <div class="bg-emerald-500/5 border border-emerald-500/10 p-2.5 rounded-xl space-y-1 text-center">
-                            <span class="text-[8px] text-slate-500 uppercase tracking-widest block">Technical Spec</span>
-                            <span class="text-[9px] text-emerald-400 font-bold">"Professional 15J Joule + UV Filter"</span>
+                        <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
+                    </button>
+
+                    <!-- Brand 3 Card: Innisfree -->
+                    <button onclick="openCollabModal('innisfree', 'INNISFREE X CBG Devices Collaboration', 'Amino Cleansing Synergy Bundle Cross-Channel Campaign Matrix', 'images/collabs/innisfree-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
+                            <img src="images/logos/innisfree.png" alt="Innisfree Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
+                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">INNISFREE</span>
                         </div>
-                    </div>
+                        <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
+                    </button>
 
-                    <div class="flex justify-between text-[10px] text-slate-500 border-t border-white/5 pt-2">
-                        <span>Store Ranking Performance:</span>
-                        <span class="text-white font-bold">#2 Best Seller</span>
-                    </div>
-                </div>
-
-                <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
-                    <div class="space-y-1.5">
-                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">SEO &amp; Listing CRO</span>
-                        <h3 class="text-xl font-bold text-white">IPL Product Line Rescue</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Rescued an underperforming device line from termination. Realigned the global buyer journey by prioritizing detailed clinical and mechanical specifications.
-                        </p>
-                    </div>
-
-                    <div class="pt-4 border-t border-white/5">
-                        <button onclick="toggleSTAR('ecommerce-02')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
-                            <span>Read Strategy</span>
-                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-02"></i>
-                        </button>
-                        
-                        <div id="star-ecommerce-02" class="hidden mt-3 pt-3 border-t border-white/5 space-y-3 text-xs">
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">An underperforming IPL device line faced immediate discontinuation because of stagnant conversion rates and poor page positioning.</p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">Overhauled product branding from superficial cosmetic marketing to expert medical specs. Reconstructed the listing decoration and engineered precise Keyword Bidding strategies to capture high-intent buyers.</p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
-                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">Propelled the device to the #2 store seller rank, securing executive approval and capital funding for next-generation models.</p>
-                            </div>
+                    <!-- Brand 4 Card: Vistra -->
+                    <button onclick="openCollabModal('vistra', 'VISTRA X CBG Devices Strategic Alignment', 'Beauty White Supplemental Conversion Funnel Strategic Execution', 'images/collabs/vistra-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
+                            <img src="images/logos/vistra.png" alt="Vistra Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
+                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">VISTRA</span>
                         </div>
-                    </div>
+                        <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
+                    </button>
+
+                    <!-- Brand 5 Card: Provamed -->
+                    <button onclick="openCollabModal('provamed', 'PROVAMED X CBG Devices Strategic Alignment', 'Dermatological Skin Solution Cross-Selling Architecture Optimization', 'images/collabs/provamed-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
+                            <img src="images/logos/provamed.png" alt="Provamed Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
+                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">PROVAMED</span>
+                        </div>
+                        <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
+                    </button>
+
+                    <!-- Brand 6 Card: Araya -->
+                    <button onclick="openCollabModal('araya', 'ARAYA X CBG Devices Strategic Alignment', 'E-Commerce Payday Mega Conversion Funnel Activation Layout', 'images/collabs/araya-activity.jpg')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-5 flex flex-col justify-between items-center text-center h-36 group focus:outline-none transition-all shadow-xl">
+                        <div class="w-full flex-grow flex items-center justify-center p-2 relative max-h-[50px]">
+                            <img src="images/logos/araya.png" alt="Araya Logo" class="w-full h-full object-contain opacity-0 transition-opacity" onload="this.style.opacity='0.8'">
+                            <span class="absolute text-[9px] font-mono font-black text-zinc-600 uppercase tracking-widest group-hover:hidden select-none">ARAYA</span>
+                        </div>
+                        <span class="text-[9px] font-mono text-zinc-500 uppercase tracking-wider flex items-center gap-1 mt-2 group-hover:text-gold transition-colors"><i class="fa-regular fa-image text-[10px]"></i> VIEW ACTIVITY</span>
+                    </button>
+
                 </div>
             </div>
 
-            <!-- Card 3: X Launch -->
-            <div class="glass rounded-3xl overflow-hidden flex flex-col reveal">
-                <!-- Visual Mockup for Social Platform Reach -->
-                <div class="h-56 bg-gradient-to-b from-navy-900 to-navy-950 p-6 flex flex-col justify-between border-b border-white/5 relative overflow-hidden">
-                    <div class="flex justify-between items-center">
-                        <span class="text-[9px] font-mono text-slate-500 tracking-wider">X_ECOSYSTEM_VOLUME</span>
-                        <i class="fa-brands fa-x-twitter text-white text-sm"></i>
-                    </div>
-
-                    <!-- Simulating structured social campaign flow -->
-                    <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-1.5 my-auto">
-                        <div class="text-[9px] text-gold font-bold">Concept: Vietnamese Aesthetic UGC</div>
-                        <p class="text-[8px] text-slate-400 leading-relaxed">Scaling micro-KOL reviews showcasing 40mm volume ion tech in real-life beauty routines.</p>
-                        <div class="flex gap-2 text-[8px] text-slate-500 pt-1">
-                            <span><i class="fa-solid fa-heart text-rose-500"></i> 14.2K</span>
-                            <span><i class="fa-solid fa-retweet text-emerald-400"></i> 3.8K</span>
-                        </div>
-                    </div>
-
-                    <div class="text-[10px] text-slate-500 font-mono text-right font-bold">Organic Brand Lift Trend: +410%</div>
+            <!-- Right Panel: Looker Studio Advanced Lightbox Frame -->
+            <div class="lg:col-span-6 glass rounded-3xl p-6 flex flex-col justify-between reveal space-y-4">
+                <div class="space-y-1">
+                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Advanced Analytics Stack</span>
+                    <h3 class="text-xl font-bold text-white">Looker Studio Performance Report</h3>
+                    <p class="text-xs text-slate-400 font-light">Consolidating video affiliate revenue matrices, programmatic ad channels, and customer acquisition metrics into scalable corporate dashboards.</p>
                 </div>
-
-                <div class="p-6 space-y-4 flex-grow flex flex-col justify-between">
-                    <div class="space-y-1.5">
-                        <span class="text-gold text-[10px] font-black uppercase tracking-widest">Niche Channel Dominance</span>
-                        <h3 class="text-xl font-bold text-white">Kiki &amp; Co Launch Campaign</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed">
-                            Sidetracked high-cost traditional media networks. Engineered organic user review architectures on X to match multi-million dollar television budgets.
-                        </p>
+                
+                <!-- Interactive Snapshot Image Module -->
+                <button onclick="openCollabModal('looker-dashboard', 'Looker Studio Analytics Dashboard', 'Live integrated enterprise marketing performance reporting template analytics suite.', 'images/reports/looker-dashboard.png')" class="w-full relative rounded-2xl bg-zinc-950 border border-white/5 overflow-hidden flex-grow min-h-[160px] flex items-center justify-center p-4 group font-mono text-[9px] text-zinc-600 transition-all hover:border-gold/30 focus:outline-none shadow-xl">
+                    <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black flex flex-col items-center justify-center z-0 space-y-1">
+                        <i class="fa-solid fa-chart-line text-xl text-zinc-700"></i>
+                        <span class="font-bold uppercase tracking-wider">images/reports/looker-dashboard.png</span>
+                        <span class="text-zinc-500 text-[8px] mt-1 flex items-center gap-1 font-sans"><i class="fa-solid fa-magnifying-glass-plus"></i> Click to enlarge view</span>
                     </div>
-
-                    <div class="pt-4 border-t border-white/5">
-                        <button onclick="toggleSTAR('ecommerce-03')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
-                            <span>Read Strategy</span>
-                            <i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-ecommerce-03"></i>
-                        </button>
-                        
-                        <div id="star-ecommerce-03" class="hidden mt-3 pt-3 border-t border-white/5 space-y-3 text-xs">
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">Launching a specialized 40mm hair curler in a market saturated by legacy brands commanding high-budget television campaigns.</p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4>
-                                <p class="text-slate-400 leading-relaxed text-[11px]">Identified and prioritized untapped reviewer structures on X. Directed an organic aesthetic direction focused on Vietnamese beauty and active ionic hair protection, coordinating with a high-performing micro-KOL group.</p>
-                            </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5">
-                                <h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4>
-                                <p class="text-slate-300 font-bold leading-relaxed text-[11px]">Achieved sales volumes directly matching media budgets of massive legacy brands, securing immediate market stability for the sub-brand.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                    <img src="images/reports/looker-dashboard.png" alt="Looker Studio Analytics Interface" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-all duration-300 group-hover:scale-[1.01]" onload="this.style.opacity='0.75'">
+                </button>
+                
+                <div class="text-[9px] font-mono text-slate-500 italic text-center font-light">🔒 Enterprise report templates available. Validation credentials supplied upon request.</div>
             </div>
+            
         </div>
     </div>
 </section>
 
-<!-- OPERATING SYSTEMS BEHIND THE GROWTH (Interactive Section) -->
+<!-- INTERACTIVE DATA & BRAND IMAGE MODAL OVERLAY FRAME (Unified 16:9 Lightbox Engine) -->
+<div id="collab-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
+    <div class="bg-slate-900 border border-white/10 w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl relative transform scale-95 transition-transform duration-300" id="modal-container">
+        <button onclick="closeCollabModal()" class="absolute top-4 right-4 z-10 w-8 h-8 rounded-full bg-black/60 border border-white/10 flex items-center justify-center text-white hover:text-gold transition-colors focus:outline-none"><i class="fa-solid fa-xmark text-sm"></i></button>
+        
+        <!-- Strict 16:9 Aspect Ratio Outer Frame Lock -->
+        <div class="w-full aspect-video bg-zinc-950 relative flex items-center justify-center font-mono text-[10px] text-zinc-600 border-b border-white/5 p-4 text-center">
+            <div class="space-y-2 select-none">
+                <i class="fa-regular fa-image text-xl block text-zinc-700"></i>
+                <p class="font-bold uppercase tracking-wider" id="modal-placeholder-text">Target Image Link</p>
+            </div>
+            <!-- Calibrated image core with smooth object-contain formatting for 16:9 frames -->
+            <img id="modal-img" src="" alt="Campaign Visual View" class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 z-10" onload="this.style.opacity='1'">
+        </div>
+        
+        <div class="p-6 space-y-1 bg-slate-950">
+            <div class="inline-flex items-center bg-gold/10 border border-gold/20 text-gold text-[9px] font-mono font-black uppercase tracking-widest px-2.5 py-0.5 rounded">Verified Campaign Node Record</div>
+            <h4 class="text-lg font-extrabold text-white tracking-tight font-sans mt-1" id="modal-title">Activity Title</h4>
+            <p class="text-xs text-slate-400 font-light leading-relaxed" id="modal-desc">Campaign core description parameters.</p>
+        </div>
+    </div>
+</div>
+
+<!-- OPERATING SYSTEMS, WORKFLOW DIAGRAMS & KOL PLAYBOOKS -->
 <section id="leadership" class="py-24 relative z-10 border-t border-white/5">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center space-y-2 mb-16">
-            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Operating Systems</span>
-            <h2 class="text-4xl font-black text-white tracking-tight">Systems That Scale Organizations</h2>
-            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Tactical campaigns are transient. True growth is driven by standardizing operational structures, matrix alignments, and dynamic capital modeling.</p>
+    <div class="max-w-7xl mx-auto px-6 space-y-16">
+        <div class="text-center space-y-2">
+            <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Operating Systems &amp; Frameworks</span>
+            <h2 class="text-4xl font-black text-white tracking-tight">Systems, Content Strategy &amp; KOL Playbooks</h2>
+            <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">Codifying market evaluation tools, long-term GMV performance models, and high-fidelity content tracking workflows.</p>
         </div>
 
-        <div class="grid lg:grid-cols-3 gap-8 mb-16">
-            <!-- System 1: Dynamic Capital Simulation -->
-            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
-                <div class="space-y-3">
-                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Interactive Calculator</span>
-                    <h3 class="text-2xl font-bold text-white">Dynamic Ad Capital Router</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        A real-world simulation of Sarah's dynamic budget methodology. Move the slider below to see how optimizing weekly traffic channels minimizes marketing waste.
-                    </p>
-                </div>
-                
-                <!-- Dynamic Calculation Widget -->
-                <div class="bg-navy-950/60 p-4 rounded-2xl border border-white/5 space-y-4">
-                    <div class="flex justify-between text-[10px] text-slate-400 uppercase tracking-wider font-bold">
-                        <span>Weekly Dynamic Shift</span>
-                        <span class="text-gold" id="percent-label">50% Optimization</span>
-                    </div>
-                    <input type="range" id="budget-slider" min="10" max="100" value="50" class="w-full h-1 bg-white/10 rounded-lg appearance-none cursor-pointer accent-gold" oninput="updateBudgetSimulation(this.value)">
-                    <div class="flex justify-between items-center border-t border-white/5 pt-3">
-                        <div class="text-xs text-slate-500">Projected Ad Waste:</div>
-                        <div class="text-sm font-black text-rose-400" id="waste-val">-40.0%</div>
-                    </div>
-                    <div class="flex justify-between items-center">
-                        <div class="text-xs text-slate-500">Optimized Channel ROAS:</div>
-                        <div class="text-sm font-black text-emerald-400" id="roas-val">4.50x</div>
-                    </div>
-                </div>
-
-                <div class="text-[10px] text-slate-500 font-mono italic">
-                    *Based on tracking active campaigns and prioritizing winning SKUs on a weekly cadence.
-                </div>
+        <!-- WORKFLOW DIAGRAM -->
+        <div class="glass rounded-3xl p-8 border-white/10 reveal space-y-6">
+            <div class="text-center space-y-1">
+                <span class="text-gold text-[10px] font-black uppercase tracking-widest block">Operational Roadmap</span>
+                <h3 class="text-xl font-bold text-white">Marketing Optimization Workflow</h3>
             </div>
-
-            <!-- System 2: Customer Chat Playbook Flowchart -->
-            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
-                <div class="space-y-3">
-                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Standard Playbook Asset</span>
-                    <h3 class="text-2xl font-bold text-white">SOP Chat Conversion Structure</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Transforming technical specs and audience concerns into a highly standardized sales script sequence for customer service agents.
-                    </p>
-                </div>
-
-                <!-- Simulated Flow Diagram -->
-                <div class="space-y-3 text-center text-[10px] uppercase font-bold tracking-wider">
-                    <div class="bg-white/5 border border-white/10 p-2.5 rounded-xl text-slate-300">
-                        Inquiry: Specific Skin Concern
-                    </div>
-                    <div class="w-0.5 h-3 bg-gold/50 mx-auto"></div>
-                    <div class="bg-gold/15 border border-gold/30 p-2.5 rounded-xl text-gold">
-                        SOP Diagnosis &amp; Custom Clinical Spec Map
-                    </div>
-                    <div class="w-0.5 h-3 bg-gold/50 mx-auto"></div>
-                    <div class="bg-emerald-500/10 border border-emerald-500/20 p-2.5 rounded-xl text-emerald-400">
-                        High-Converting Close Script &amp; Up-Sell Match
-                    </div>
-                </div>
-
-                <div class="text-[10px] text-slate-500 font-mono text-center">
-                    🔒 Playbook Preview: Admin closing rates increased by +35%.
-                </div>
-            </div>
-
-            <!-- System 3: Matrix Leadership Structure -->
-            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
-                <div class="space-y-3">
-                    <span class="text-gold text-[10px] font-black uppercase tracking-widest">Operational Diagram</span>
-                    <h3 class="text-2xl font-bold text-white">Matrix Leadership Setup</h3>
-                    <p class="text-xs text-slate-400 leading-relaxed">
-                        Orchestrating direct internal teams alongside cross-functional restaurant departments and external agencies.
-                    </p>
-                </div>
-
-                <!-- Structured organization layout simulated in CSS -->
-                <div class="grid grid-cols-3 gap-2 text-center text-[9px] font-bold">
-                    <div class="col-span-3 bg-gold text-black py-2 rounded-xl">
-                        Sarah Rahman (Growth Head)
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-2 rounded-lg text-slate-300">
-                        Marcom Team<br>(10 Staff)
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-2 rounded-lg text-slate-300">
-                        F&amp;B Operations<br>(30+ Stakeholders)
-                    </div>
-                    <div class="bg-white/5 border border-white/10 p-2 rounded-lg text-slate-300">
-                        Agencies<br>(4 Partners)
-                    </div>
-                </div>
-
-                <div class="text-[10px] text-slate-500 font-mono text-center">
-                    Seamless coordination between brand strategy and operations.
-                </div>
+            <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 relative">
+                <div class="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex flex-col justify-between items-center text-center hover:border-gold/30 transition-colors"><div class="w-9 h-9 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-black text-sm mb-3">01</div><h4 class="text-xs font-bold text-white uppercase tracking-wider">Insight Discovery</h4><p class="text-[11px] text-slate-400 mt-2 font-light">Comprehensive competitor retro-analysis and survey tracking to map historical metrics.</p></div>
+                <div class="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex flex-col justify-between items-center text-center hover:border-gold/30 transition-colors"><div class="w-9 h-9 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-black text-sm mb-3">02</div><h4 class="text-xs font-bold text-white uppercase tracking-wider">Strategy Blueprint</h4><p class="text-[11px] text-slate-400 mt-2 font-light">Structuring data-backed channel logic, GMV attribution models, and platform positioning parameters.</p></div>
+                <div class="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex flex-col justify-between items-center text-center hover:border-gold/30 transition-colors"><div class="w-9 h-9 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-black text-sm mb-3">03</div><h4 class="text-xs font-bold text-white uppercase tracking-wider">SOP Execution</h4><p class="text-[11px] text-slate-400 mt-2 font-light">Deploying strict visual constraint playbooks and format briefs tailored natively to channel algorithms.</p></div>
+                <div class="bg-white/[0.01] border border-white/5 p-5 rounded-2xl flex flex-col justify-between items-center text-center hover:border-gold/30 transition-colors"><div class="w-9 h-9 rounded-xl bg-gold/10 text-gold flex items-center justify-center font-black text-sm mb-3">04</div><h4 class="text-xs font-bold text-white uppercase tracking-wider">Measurement &amp; Scale</h4><p class="text-[11px] text-slate-400 mt-2 font-light">Aggregating analytical streams into Looker Studio for programmatic conversion auditing and expansion.</p></div>
             </div>
         </div>
 
-        <!-- Global Scope Highlight Card -->
-        <div class="glass rounded-3xl p-8 md:p-10 relative overflow-hidden reveal">
-            <div class="absolute inset-0 bg-gradient-to-r from-gold/5 to-transparent pointer-events-none"></div>
-            
-            <h3 class="text-2xl font-black text-white mb-8 text-center md:text-left">Leadership Framework Key Metrics</h3>
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center md:text-left">
-                <div class="space-y-1">
-                    <div class="text-4xl font-black text-gold">10</div>
-                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Direct Staff Managed</div>
+        <!-- 3-Column Detailed Systems Grid -->
+        <div class="grid lg:grid-cols-3 gap-8">
+            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start"><div class="w-12 h-12 rounded-2xl bg-gold/10 border border-gold/20 flex items-center justify-center text-gold"><i class="fa-solid fa-magnifying-glass-chart text-xl"></i></div><span class="text-[9px] bg-gold/10 text-gold border border-gold/20 px-2 py-0.5 rounded-md font-mono font-bold tracking-wider">SYSTEM 01</span></div>
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">Competitive Intelligence</span>
+                        <h3 class="text-2xl font-bold text-white">Competitor Historical Survey</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Executing comprehensive competitor retro-analysis to map historic brand growth, uncover successful hero products, evaluate ad-spend bidding ranges, and reverse-engineer conversion models.</p>
+                    </div>
+                    <div class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-white/5 font-light">
+                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-1.5 hover:border-gold/30 transition-colors"><div class="flex items-center gap-2 text-gold"><i class="fa-solid fa-arrow-trend-up text-[11px]"></i><span class="text-[10px] font-mono font-bold tracking-wider uppercase">Programmatic Bidding</span></div><p class="text-slate-400 text-[11px] leading-relaxed">Analyzing search volumes and ad bid rates across premium targets to optimally position performance assets.</p></div>
+                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-1.5 hover:border-gold/30 transition-colors"><div class="flex items-center gap-2 text-white"><i class="fa-solid fa-tags text-[11px]"></i><span class="text-[10px] font-mono font-bold tracking-wider uppercase">Campaign Pricing Audits</span></div><p class="text-slate-400 text-[11px] leading-relaxed">Tracking competitive pricing variations throughout mega-campaign cycles to design profit-optimized offers.</p></div>
+                    </div>
                 </div>
-                <div class="space-y-1">
-                    <div class="text-4xl font-black text-white">30+</div>
-                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Cross-Functional Stakeholders</div>
+                <div class="text-[10px] text-zinc-500 font-mono italic flex items-center gap-1.5 font-light"><span class="w-1.5 h-1.5 rounded-full bg-zinc-600"></span>Eliminating platform guesswork &amp; blind budget allocation.</div>
+            </div>
+
+            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start"><div class="w-12 h-12 rounded-2xl bg-blue-500/10 border border-blue-500/20 flex items-center justify-center text-blue-400"><i class="fa-solid fa-chart-line text-xl"></i></div><span class="text-[9px] bg-blue-500/10 text-blue-400 border border-blue-500/20 px-2 py-0.5 rounded-md font-mono font-bold tracking-wider">SYSTEM 02</span></div>
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">Advanced Influence Management</span>
+                        <h3 class="text-2xl font-bold text-white">GMV &amp; Long-Term KOL Alignment</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Bypassing superficial follower or comment numbers that are easily manipulated. Selecting macro and micro influencers based strictly on documented Gross Merchandise Value (GMV) output.</p>
+                    </div>
+                    <div class="space-y-2.5 text-xs text-slate-300 pt-2 border-t border-white/5 font-light">
+                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-1.5 hover:border-gold/30 transition-colors"><div class="flex items-center gap-2 text-gold"><i class="fa-solid fa-handshake text-[11px]"></i><span class="text-[10px] font-mono font-bold tracking-wider uppercase">Long-Term Trust Model</span></div><p class="text-slate-400 text-[11px] leading-relaxed">Deploying long-term KOL retention models to build profound consumer trust, validating routine integration.</p></div>
+                        <div class="bg-white/[0.01] border border-white/5 p-3 rounded-xl space-y-1.5 hover:border-gold/30 transition-colors"><div class="flex items-center gap-2 text-white"><i class="fa-solid fa-cubes text-[11px]"></i><span class="text-[10px] font-mono font-bold tracking-wider uppercase">Cross-Selling Catalyst</span></div><p class="text-slate-400 text-[11px] leading-relaxed">Coordinating creators to represent multiple catalog items over time, establishing implicit brand association.</p></div>
+                    </div>
                 </div>
-                <div class="space-y-1">
-                    <div class="text-4xl font-black text-gold">6-Figure</div>
-                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Monthly Ad Allocations</div>
+                <div class="text-[10px] text-zinc-500 font-mono italic flex items-center gap-1.5 font-light"><span class="w-1.5 h-1.5 rounded-full bg-gold"></span>Maximizing customer acquisition velocity via actual GMV metrics.</div>
+            </div>
+
+            <div class="glass p-8 rounded-3xl space-y-6 flex flex-col justify-between reveal">
+                <div class="space-y-4">
+                    <div class="flex justify-between items-start"><div class="w-12 h-12 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400"><i class="fa-solid fa-sliders text-xl"></i></div><span class="text-[9px] bg-emerald-500/10 text-emerald-400 border border-emerald-500/20 px-2 py-0.5 rounded-md font-mono font-bold tracking-wider">SYSTEM 03</span></div>
+                    <div class="space-y-2">
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">High-Fidelity Content Briefing</span>
+                        <h3 class="text-2xl font-bold text-white">Platform Adaptability &amp; Visual SOPs</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Tailoring asset formats precisely to native channel algorithms while enforcing clear creative parameters that prevent messaging mistakes without producing mechanical content.</p>
+                    </div>
+                    <div class="space-y-2 text-xs pt-2 border-t border-white/5 font-light">
+                        <button onclick="toggleSTAR('platform-adapt')" class="w-full text-left bg-white/[0.02] border border-white/5 p-3 rounded-xl flex justify-between items-center group hover:border-gold/30 transition-all focus:outline-none">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-icons text-gold text-sm group-hover:scale-110 transition-transform"></i><div class="space-y-0.5"><span class="text-[10px] font-bold text-slate-200 uppercase tracking-wider block">Omnichannel Format Routing</span><span class="text-slate-400 text-[10px]">IG Stories vs TikTok Videos</span></div></div><i class="fa-solid fa-chevron-down text-slate-500 group-hover:text-gold transition-transform duration-300" id="icon-platform-adapt"></i>
+                        </button>
+                        <div id="star-platform-adapt" class="hidden p-3 bg-black/20 rounded-xl border border-white/5 space-y-2 text-[11px] text-slate-400">
+                            <p>• <strong class="text-white">Instagram</strong>: High-fidelity visual styling, premium art direction, and immersive lifestyle storytelling.</p>
+                            <p>• <strong class="text-white">TikTok</strong>: Fast-paced broadcast editing, high-retention structural hooks, and direct result-driven showcases.</p>
+                            <p>• <strong class="text-white">Facebook Page</strong>: Native layouts utilizing structured photo albums to optimize look-and-feel.</p>
+                            <p>• <strong class="text-white">Facebook Groups</strong>: Community-centric organic seeding setups built around genuine consumer questions.</p>
+                        </div>
+                        <button onclick="toggleSTAR('brief-sop')" class="w-full text-left bg-white/[0.02] border border-white/5 p-3 rounded-xl flex justify-between items-center group hover:border-gold/30 transition-all focus:outline-none">
+                            <div class="flex items-center gap-3"><i class="fa-solid fa-clipboard-list text-emerald-400 text-sm group-hover:scale-110 transition-transform"></i><div class="space-y-0.5"><span class="text-[10px] font-bold text-slate-200 uppercase tracking-wider block">KOL Briefing Constraints</span><span class="text-slate-400 text-[10px]">Strict Do's &amp; Don'ts Documentation</span></div></div><i class="fa-solid fa-chevron-down text-slate-500 group-hover:text-gold transition-transform duration-300" id="icon-brief-sop"></i>
+                        </button>
+                        <div id="star-brief-sop" class="hidden p-3 bg-black/20 rounded-xl border border-white/5 space-y-2 text-[11px] text-slate-400">
+                            <p>• <strong class="text-white">Visual Directives</strong>: Enforcing clinical, bright, clean spaces with specific focus angles highlighting authentic product details.</p>
+                            <p>• <strong class="text-white">Strategic Constraints</strong>: Precise textual constraints outlining prohibited terms, banned aesthetic distractions, and mandating transparent technical reporting.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="space-y-1">
-                    <div class="text-4xl font-black text-white">20+</div>
-                    <div class="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Successful Campaigns</div>
-                </div>
+                <div class="text-[10px] text-zinc-500 font-mono text-center flex items-center justify-center gap-1.5 font-light"><span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>Active visual SOP framework playbook.</div>
             </div>
         </div>
     </div>
@@ -960,175 +958,84 @@ body {
         <div class="text-center space-y-2 mb-12">
             <span class="text-gold text-[10px] font-black uppercase tracking-[0.3em]">Corporate Relations</span>
             <h2 class="text-3xl font-black text-white">Initiate Collaboration</h2>
-            <p class="text-xs text-slate-400 leading-relaxed">
-                Connect for Marketing Manager, Growth, and Performance Strategy positions.
-            </p>
+            <p class="text-xs text-slate-400 leading-relaxed font-light">Connect for Marketing Manager, Growth, and Performance Strategy leadership opportunities.</p>
         </div>
-
-        <form id="contact-form" onsubmit="handleFormSubmission(event)" class="space-y-5">
-            <div class="space-y-2">
-                <label class="block text-[9px] font-bold uppercase tracking-wider text-slate-400">Your Identity / Organization</label>
-                <input type="text" id="form-name" required placeholder="John Doe / Enterprise" class="w-full bg-white/[0.01] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-gold transition-colors">
-            </div>
-            
-            <div class="space-y-2">
-                <label class="block text-[9px] font-bold uppercase tracking-wider text-slate-400">Professional Email Address</label>
-                <input type="email" id="form-email" required placeholder="john@enterprise.com" class="w-full bg-white/[0.01] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-gold transition-colors">
-            </div>
-
-            <div class="space-y-2">
-                <label class="block text-[9px] font-bold uppercase tracking-wider text-slate-400">Proposed Engagement Model</label>
-                <textarea id="form-message" required rows="4" placeholder="Brief outline of candidate requirements and company goals..." class="w-full bg-white/[0.01] border border-white/10 rounded-xl px-4 py-3 text-xs text-white placeholder-slate-600 focus:outline-none focus:border-gold transition-colors"></textarea>
-            </div>
-
-            <button type="submit" class="w-full bg-gradient-to-r from-gold to-gold-600 hover:from-white hover:to-white text-black py-4 rounded-xl text-xs font-black uppercase tracking-widest transition-all duration-300 shadow-lg hover:shadow-gold/10">
-                Send Secure Inquiry
-            </button>
-        </form>
+        <div class="space-y-4">
+            <a href="mailto:sarah.rahman@example.com" class="glass group p-4 rounded-xl flex items-center justify-between hover:border-gold/30 transition-all duration-300">
+                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-gold/10 flex items-center justify-center text-gold border border-gold/20 group-hover:bg-gold group-hover:text-black transition-colors"><i class="fa-solid fa-envelope text-sm"></i></div><div class="text-left"><p class="text-xs font-black text-white uppercase tracking-wider">Corporate Communications</p><p class="text-[11px] text-slate-500 mt-0.5">sarah.rahman@example.com</p></div></div><i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-600 group-hover:text-gold transition-colors pr-2"></i>
+            </a>
+            <a href="https://linkedin.com/in/sarah-rahman-growth" target="_blank" class="glass group p-4 rounded-xl flex items-center justify-between hover:border-gold/30 transition-all duration-300">
+                <div class="flex items-center gap-3"><div class="w-10 h-10 rounded-lg bg-blue-500/10 flex items-center justify-center text-blue-400 border border-blue-500/20 group-hover:bg-gradient-to-r group-hover:from-gold group-hover:to-gold-600 group-hover:text-black transition-colors"><i class="fa-brands fa-linkedin-in text-sm"></i></div><div class="text-left"><p class="text-xs font-black text-white uppercase tracking-wider">Executive Professional Network</p><p class="text-[11px] text-slate-500 mt-0.5">linkedin.com/in/sarah-rahman</p></div></div><i class="fa-solid fa-arrow-up-right-from-square text-xs text-slate-600 group-hover:text-gold transition-colors pr-2"></i>
+            </a>
+        </div>
     </div>
 </section>
 
 <!-- FOOTER -->
 <footer class="py-12 text-center border-t border-white/5 text-slate-500 text-[11px] space-y-1 relative z-10">
     <div class="font-bold text-slate-400 uppercase tracking-wider">SARAH RAHMAN</div>
-    <div>Growth &amp; Performance Manager Portfolio</div>
-    <div class="text-[9px] text-slate-600 font-mono mt-2">Designed with absolute business integrity. Standard metrics used.</div>
+    <div>Marketing Manager Portfolio</div>
 </footer>
 
 <!-- SYSTEM SCRIPTS -->
 <script>
-// Responsive Navigation Scroll Effect
 window.addEventListener('scroll', () => {
     const nav = document.getElementById('main-nav');
     if (window.scrollY > 20) {
         nav.classList.add('bg-navy-950/95', 'border-white/10', 'py-3');
-        nav.classList.remove('bg-navy-950/70', 'border-white/5', 'py-4');
     } else {
         nav.classList.remove('bg-navy-950/95', 'border-white/10', 'py-3');
-        nav.classList.add('bg-navy-950/70', 'border-white/5', 'py-4');
     }
 });
 
-// Mobile menu toggle logic
-function toggleMobileNav() {
-    const menu = document.getElementById('mobile-menu');
-    const icon = document.getElementById('menu-icon');
-    
-    if (menu.classList.contains('hidden')) {
-        menu.classList.remove('hidden');
-        icon.classList.remove('fa-bars-staggered');
-        icon.classList.add('fa-xmark');
-    } else {
-        menu.classList.add('hidden');
-        icon.classList.add('fa-bars-staggered');
-        icon.classList.remove('fa-xmark');
-    }
-}
-
-// Intersecting Scroll Reveal Mechanism
 const revealObserver = new IntersectionObserver(entries => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            entry.target.classList.add('active');
-        }
-    });
+    entries.forEach(entry => { if (entry.isIntersecting) entry.target.classList.add('active'); });
 }, { threshold: 0.1 });
-
 document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
-// Interactive Parallax mouse effects for high-fidelity Hero Card
-window.addEventListener('mousemove', e => {
-    const container = document.getElementById('hero-dashboard-container');
-    if (!container) return;
-    
-    // Check viewport width to avoid parallax jumping on mobile devices
-    if (window.innerWidth > 1024) {
-        const card = document.getElementById('parallax-card');
-        const rect = container.getBoundingClientRect();
-        
-        // Calculate dynamic relative coordinates
-        const x = e.clientX - rect.left - (rect.width / 2);
-        const y = e.clientY - rect.top - (rect.height / 2);
-        
-        // Set dynamic transform values
-        card.style.transform = `rotateY(${x * 0.03}deg) rotateX(${-y * 0.03}deg) translateZ(10px)`;
-    }
-});
-
-// Reset card transform on mouseout
-document.getElementById('hero-dashboard-container')?.addEventListener('mouseleave', () => {
-    const card = document.getElementById('parallax-card');
-    if (card) {
-        card.style.transform = 'none';
-    }
-});
-
-// Accordion Controller for STAR Deep-Dives
 function toggleSTAR(starId) {
     const element = document.getElementById('star-' + starId);
     const icon = document.getElementById('icon-' + starId);
-    
     if (element.classList.contains('hidden')) {
         element.classList.remove('hidden');
-        element.classList.add('animate-fade-in');
         icon.classList.add('rotate-180');
-        showToast('STRATEGY DEPLOYED', 'STAR Narrative is now fully expanded.');
     } else {
         element.classList.add('hidden');
         icon.classList.remove('rotate-180');
     }
 }
 
-// Live Capital Router Simulator Logic
-function updateBudgetSimulation(val) {
-    const sliderPercent = parseInt(val);
-    const percentLabel = document.getElementById('percent-label');
-    const wasteVal = document.getElementById('waste-val');
-    const roasVal = document.getElementById('roas-val');
+function openCollabModal(brandId, title, description, imgPath) {
+    const modal = document.getElementById('collab-modal');
+    const container = document.getElementById('modal-container');
+    const placeholderText = document.getElementById('modal-placeholder-text');
     
-    // Label output
-    percentLabel.innerText = `${sliderPercent}% Optimization`;
+    document.getElementById('modal-title').innerText = title;
+    document.getElementById('modal-desc').innerText = description;
+    placeholderText.innerText = imgPath;
     
-    // Dynamic math representations
-    const wasteCalculated = -10.0 - (sliderPercent * 0.8);
-    const roasCalculated = 1.2 + (sliderPercent * 0.076);
-    
-    wasteVal.innerText = `${wasteCalculated.toFixed(1)}%`;
-    roasVal.innerText = `${roasCalculated.toFixed(2)}x`;
-}
-
-// Custom Premium Toast Notifications (Safe Alternative to forbidden alerts)
-function showToast(title, message) {
-    const toast = document.getElementById('toast');
-    const titleEl = document.getElementById('toast-title');
-    const msgEl = document.getElementById('toast-msg');
-    
-    titleEl.innerText = title;
-    msgEl.innerText = message;
-    
-    toast.classList.remove('translate-y-20', 'opacity-0');
-    toast.classList.add('translate-y-0', 'opacity-100');
-    
+    const modalImg = document.getElementById('modal-img');
+    modalImg.src = imgPath;
+    modal.classList.remove('hidden');
     setTimeout(() => {
-        toast.classList.add('translate-y-20', 'opacity-0');
-        toast.classList.remove('translate-y-0', 'opacity-100');
-    }, 4000);
+        modal.classList.add('opacity-100');
+        container.classList.remove('scale-95');
+        container.classList.add('scale-100');
+    }, 10);
 }
 
-// Form Submission Execution System
-function handleFormSubmission(event) {
-    event.preventDefault();
-    
-    const name = document.getElementById('form-name').value;
-    const email = document.getElementById('form-email').value;
-    
-    // Clear inputs safely
-    document.getElementById('form-name').value = '';
-    document.getElementById('form-email').value = '';
-    document.getElementById('form-message').value = '';
-    
-    showToast('Secure Action Sent', `Connection established. Thank you, ${name}.`);
+function closeCollabModal() {
+    const modal = document.getElementById('collab-modal');
+    const container = document.getElementById('modal-container');
+    container.classList.remove('scale-100');
+    container.classList.add('scale-95');
+    modal.classList.remove('opacity-100');
+    setTimeout(() => { modal.classList.add('hidden'); }, 300);
 }
+
+document.getElementById('collab-modal').addEventListener('click', function(e) {
+    if (e.target === this) closeCollabModal();
+});
 </script>
 
 </body>
