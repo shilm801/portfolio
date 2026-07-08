@@ -9,7 +9,7 @@
 <script src="https://cdn.tailwindcss.com"></script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2=family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght=300;400;500;600;700;800&family=Playfair+Display:ital,wght=0,600;0,700;1,500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <script>
@@ -101,12 +101,13 @@ body {
 }
 </style>
 </head>
-<body class="relative min-h-screen">
+<body class="relative min-h-[100vh]">
 
 <div class="absolute top-0 left-0 w-full h-[120vh] bg-grid pointer-events-none z-0"></div>
 <div class="absolute top-1/4 right-0 w-96 h-96 rounded-full bg-gold/5 blur-[120px] pointer-events-none"></div>
 <div class="absolute top-1/2 left-0 w-80 h-80 rounded-full bg-blue-500/5 blur-[120px] pointer-events-none"></div>
 
+<!-- NAVIGATION BAR -->
 <nav class="fixed w-full z-50 bg-navy-950/70 backdrop-blur-md border-b border-white/5 transition-all duration-300" id="main-nav">
     <div class="max-w-[1600px] mx-auto px-6 py-4 flex justify-between items-center">
         <a href="#home" class="group flex flex-col">
@@ -118,6 +119,7 @@ body {
             </div>
         </a>
         
+        <!-- Desktop Nav Items -->
         <div class="hidden lg:flex items-center space-x-6 text-xs tracking-wider uppercase font-bold text-slate-300">
             <a href="#home" class="hover:text-gold transition-colors py-2">Executive Summary</a>
             <a href="#skills" class="hover:text-gold transition-colors py-2">Hard Skills Matrix</a>
@@ -129,6 +131,7 @@ body {
             <a href="sarah-rahman-resume.pdf" target="_blank" class="border border-gold text-gold hover:bg-gold hover:text-black px-3 py-1.5 rounded transition-all duration-300 text-[10px] font-black uppercase"><i class="fa-solid fa-file-arrow-down mr-1"></i> Download Resume (PDF)</a>
         </div>
 
+        <!-- Mobile Trigger Control -->
         <div class="flex lg:hidden items-center space-x-3">
             <a href="sarah-rahman-resume.pdf" target="_blank" class="border border-gold text-gold hover:bg-gold hover:text-black px-2.5 py-1.5 rounded text-[9px] font-black tracking-wider uppercase"><i class="fa-solid fa-file-arrow-down mr-1"></i> Resume</a>
             <button onclick="toggleMobileMenu()" class="text-white hover:text-gold focus:outline-none p-1.5 bg-white/5 border border-white/10 rounded-lg text-sm" aria-label="Toggle Menu">
@@ -138,6 +141,7 @@ body {
     </div>
 </nav>
 
+<!-- SLIDE-IN MOBILE NAVIGATION DRAWER -->
 <div id="mobile-drawer" class="fixed inset-0 z-50 bg-black/80 backdrop-blur-md hidden opacity-0 transition-opacity duration-300 lg:hidden">
     <div class="fixed top-0 right-0 h-full w-72 bg-slate-950 border-l border-white/10 p-6 flex flex-col justify-between transform translate-x-full transition-transform duration-300 shadow-2xl" id="drawer-container">
         <div class="space-y-6">
@@ -166,6 +170,7 @@ body {
     </div>
 </div>
 
+<!-- 1. HERO SECTION -->
 <section id="home" class="relative pt-28 pb-4 overflow-hidden">
     <div class="max-w-[1600px] mx-auto px-6 w-full z-10 relative">
         <div class="flex flex-col lg:flex-row gap-8 items-center lg:items-start text-center lg:text-left">
@@ -237,6 +242,7 @@ body {
     </div>
 </section>
 
+<!-- 2. KEY METRICS SECTION (COMPACT PORTFOLIO IMPACT SNAPSHOT) -->
 <section class="py-4 relative z-10 max-w-full overflow-hidden">
     <div class="max-w-[1600px] mx-auto px-6 w-full">
         <div class="glass rounded-[24px] p-6 border-white/10 shadow-2xl bg-gradient-to-r from-navy-950 via-black/80 to-navy-950 flex flex-col space-y-5">
@@ -254,6 +260,7 @@ body {
 
             <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4">
                 
+                <!-- Card 1 -->
                 <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
                     <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">ECOMMERCE TURNAROUND</span>
                     <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-sans">#1 &amp; #2</span></div>
@@ -263,6 +270,7 @@ body {
                     </div>
                 </div>
                 
+                <!-- Card 2 -->
                 <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
                     <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">ROAS PERFORMANCE</span>
                     <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-gold tracking-tight font-sans">20.0x+</span></div>
@@ -272,6 +280,7 @@ body {
                     </div>
                 </div>
                 
+                <!-- Card 3 -->
                 <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
                     <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">LIVE PROMOTION GROWTH</span>
                     <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-sans">+63%</span></div>
@@ -281,6 +290,7 @@ body {
                     </div>
                 </div>
                 
+                <!-- Card 4 -->
                 <div class="bg-white/[0.01] border border-white/5 rounded-xl p-4 flex flex-col justify-between hover:border-white/10 transition-colors min-h-[115px]">
                     <span class="text-[8px] font-bold text-slate-500 uppercase tracking-wider block font-sans">CREATIVE COST EFFICIENCY</span>
                     <div class="my-0.5"><span class="text-2xl lg:text-3xl font-extrabold text-white tracking-tight font-sans">-70%</span></div>
@@ -295,9 +305,11 @@ body {
     </div>
 </section>
 
+<!-- SKILLS & CAPABILITIES EXPERTISE AREA -->
 <section id="skills" class="py-24 relative z-10">
     <div class="max-w-[1600px] mx-auto px-6 w-full space-y-16">
         
+        <!-- SECTION HEADER -->
         <div class="space-y-4 max-w-4xl">
             <div class="inline-flex items-center bg-gold/10 border border-gold/20 px-3 py-1 rounded-full text-[9px] uppercase font-mono tracking-widest text-gold">
                 <i class="fa-solid fa-layer-group mr-1.5"></i> Expertise Framework
@@ -310,10 +322,12 @@ body {
             </p>
         </div>
 
+        <!-- CORE COMPETENCIES LAYOUT -->
         <div class="space-y-4">
             <span class="text-[9px] font-mono font-black uppercase tracking-[0.2em] text-slate-500 block pl-1">Core Competencies</span>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
                 
+                <!-- Card 1 -->
                 <div class="glass rounded-xl p-4 flex gap-3.5 items-center min-h-[76px] hover:border-gold/20 group transition-all duration-300">
                     <div class="w-8 h-8 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-xs shrink-0 group-hover:bg-gold/10 transition-colors">
                         <i class="fa-solid fa-chart-line"></i>
@@ -324,6 +338,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Card 2 -->
                 <div class="glass rounded-xl p-4 flex gap-3.5 items-center min-h-[76px] hover:border-gold/20 group transition-all duration-300">
                     <div class="w-8 h-8 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-xs shrink-0 group-hover:bg-gold/10 transition-colors">
                         <i class="fa-solid fa-magnifying-glass-chart"></i>
@@ -334,6 +349,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Card 3 -->
                 <div class="glass rounded-xl p-4 flex gap-3.5 items-center min-h-[76px] hover:border-gold/20 group transition-all duration-300">
                     <div class="w-8 h-8 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-xs shrink-0 group-hover:bg-gold/10 transition-colors">
                         <i class="fa-solid fa-ear-listen"></i>
@@ -344,6 +360,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Card 4 -->
                 <div class="glass rounded-xl p-4 flex gap-3.5 items-center min-h-[76px] hover:border-gold/20 group transition-all duration-300">
                     <div class="w-8 h-8 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-xs shrink-0 group-hover:bg-gold/10 transition-colors">
                         <i class="fa-solid fa-palette"></i>
@@ -354,6 +371,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Card 5 -->
                 <div class="glass rounded-xl p-4 flex gap-3.5 items-center min-h-[76px] hover:border-gold/20 group transition-all duration-300">
                     <div class="w-8 h-8 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-xs shrink-0 group-hover:bg-gold/10 transition-colors">
                         <i class="fa-solid fa-clapperboard"></i>
@@ -364,6 +382,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Card 6 -->
                 <div class="glass rounded-xl p-4 flex gap-3.5 items-center min-h-[76px] hover:border-gold/20 group transition-all duration-300">
                     <div class="w-8 h-8 rounded-lg bg-gold/5 border border-gold/10 flex items-center justify-center text-gold text-xs shrink-0 group-hover:bg-gold/10 transition-colors">
                         <i class="fa-solid fa-filter"></i>
@@ -377,8 +396,10 @@ body {
             </div>
         </div>
 
+        <!-- AI-ASSISTED WORKFLOW NOTE & TOOLS & PLATFORMS -->
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 pt-4 border-t border-white/5">
             
+            <!-- AI Banner Note -->
             <div class="lg:col-span-5 bg-gradient-to-br from-gold/10 via-amber-500/[0.02] to-transparent border border-gold/20 rounded-2xl p-5 flex gap-4 items-start shadow-xl">
                 <div class="w-8 h-8 rounded-lg bg-gold/20 flex items-center justify-center text-gold text-sm shrink-0 animate-pulse">
                     <i class="fa-solid fa-wand-magic-sparkles"></i>
@@ -391,10 +412,12 @@ body {
                 </div>
             </div>
 
+            <!-- Grouped Tools & Platforms -->
             <div class="lg:col-span-7 flex flex-col justify-between space-y-4">
                 <span class="text-[9px] font-mono font-black uppercase tracking-[0.2em] text-slate-500 block pl-1">Tools &amp; Platforms Ecosystem</span>
                 
                 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 bg-white/[0.01] border border-white/5 rounded-2xl p-4 flex-grow">
+                    <!-- Column 1 -->
                     <div class="space-y-3">
                         <div class="space-y-1">
                             <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wide block">Ads &amp; Commerce</span>
@@ -405,6 +428,7 @@ body {
                             <p class="text-[11px] text-slate-300 font-light leading-relaxed">Looker Studio • Excel • Ads Dashboards</p>
                         </div>
                     </div>
+                    <!-- Column 2 -->
                     <div class="space-y-3">
                         <div class="space-y-1">
                             <span class="text-[9px] font-mono font-bold text-slate-400 uppercase tracking-wide block">Creative</span>
@@ -420,6 +444,7 @@ body {
 
         </div>
 
+        <!-- WHAT I ACTUALLY BUILD (MAIN VISUAL FOCUS - 2x2 GRID) -->
         <div id="impact" class="space-y-6 pt-6">
             <div class="flex items-center justify-between border-b border-white/5 pb-2">
                 <h3 class="text-[10px] font-mono font-black uppercase tracking-[0.2em] text-slate-400 flex items-center gap-2">
@@ -430,6 +455,7 @@ body {
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 
+                <!-- Capability Card 1 -->
                 <div class="glass bg-gradient-to-br from-white/[0.015] via-transparent to-transparent border border-white/10 rounded-2xl p-8 space-y-6 hover:border-gold/40 hover:shadow-[0_0_30px_rgba(200,169,107,0.15)] group transition-all duration-500">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 rounded-xl bg-gold/5 border border-gold/20 flex items-center justify-center text-gold text-lg group-hover:bg-gold group-hover:text-black transition-all duration-300 shadow-lg">
@@ -447,6 +473,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Capability Card 2 -->
                 <div class="glass bg-gradient-to-br from-white/[0.015] via-transparent to-transparent border border-white/10 rounded-2xl p-8 space-y-6 hover:border-gold/40 hover:shadow-[0_0_30px_rgba(200,169,107,0.15)] group transition-all duration-500">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 rounded-xl bg-gold/5 border border-gold/20 flex items-center justify-center text-gold text-lg group-hover:bg-gold group-hover:text-black transition-all duration-300 shadow-lg">
@@ -464,6 +491,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Capability Card 3 -->
                 <div class="glass bg-gradient-to-br from-white/[0.015] via-transparent to-transparent border border-white/10 rounded-2xl p-8 space-y-6 hover:border-gold/40 hover:shadow-[0_0_30px_rgba(200,169,107,0.15)] group transition-all duration-500">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 rounded-xl bg-gold/5 border border-gold/20 flex items-center justify-center text-gold text-lg group-hover:bg-gold group-hover:text-black transition-all duration-300 shadow-lg">
@@ -481,6 +509,7 @@ body {
                     </div>
                 </div>
 
+                <!-- Capability Card 4 -->
                 <div class="glass bg-gradient-to-br from-white/[0.015] via-transparent to-transparent border border-white/10 rounded-2xl p-8 space-y-6 hover:border-gold/40 hover:shadow-[0_0_30px_rgba(200,169,107,0.15)] group transition-all duration-500">
                     <div class="flex justify-between items-start">
                         <div class="w-12 h-12 rounded-xl bg-gold/5 border border-gold/20 flex items-center justify-center text-gold text-lg group-hover:bg-gold group-hover:text-black transition-all duration-300 shadow-lg">
@@ -504,6 +533,7 @@ body {
     </div>
 </section>
 
+<!-- 6. CAREER EVOLUTION SECTION -->
 <section id="timeline" class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
     <div class="max-w-5xl mx-auto px-6 space-y-12">
         <div class="text-center space-y-2">
@@ -570,6 +600,7 @@ body {
                 </div>
             </div>
 
+            <!-- TIMELINE INDEX: CBG Devices -->
             <div class="glass rounded-2xl overflow-hidden reveal">
                 <div class="p-6 md:p-8 space-y-6">
                     <div class="flex justify-between items-start flex-wrap gap-4 border-b border-white/5 pb-4">
@@ -587,13 +618,13 @@ body {
                             <span>Review Core Responsibilities &amp; Metrics</span><i class="fa-solid fa-chevron-down transition-transform duration-300" id="icon-timeline-cbg"></i>
                         </button>
                         <div id="star-timeline-cbg" class="hidden mt-4 pt-4 border-t border-white/5 bg-black/20 p-4 rounded-xl">
-                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-disc list-inside leading-relaxed font-light">
-                                <li>Led growth marketing across Meta, TikTok, Shopee, Lazada, Google Ads, and KOL channels, focusing on ROAS-driven ads, marketplace SEO, brand positioning, visual direction, and conversion optimization.</li>
-                                <li>Achieved consistent 20.0+ ROAS across the beauty gadget store through paid media optimization, marketplace visibility, product content, audience targeting, and full-funnel conversion strategy.</li>
-                                <li>Revived a nearly discontinued IPL Hair Removal product line by rebuilding marketplace SEO across product titles, keywords, listings, benefit messaging, FAQs, and review keywords.</li>
-                                <li>Built the kiki&amp;co brand from zero by defining positioning, analyzing competitors, shaping a Korean-inspired minimalist visual direction, and supporting a new hair styling product line launch.</li>
-                                <li>Drove Electric Guasha to #1 category ranking without celebrity endorsements through a data-driven X review ecosystem and KOL/social proof strategy.</li>
-                                <li>Built a zero-cost Looker Studio performance reporting system from scratch using Excel-connected data sources to support ROAS optimization and campaign decision-making.</li>
+                            <ul class="text-[11px] text-slate-400 space-y-2.5 list-none leading-relaxed font-light">
+                                <li class="mb-2.5">• Led growth marketing across Meta, TikTok, Shopee, Lazada, Google Ads, and KOL channels, focusing on ROAS-driven ads, marketplace SEO, brand positioning, visual direction, and conversion optimization.</li>
+                                <li class="mb-2.5">• Achieved consistent 20.0+ ROAS across the beauty gadget store through paid media optimization, marketplace visibility, product content, audience targeting, and full-funnel conversion strategy.</li>
+                                <li class="mb-2.5">• Revived a nearly discontinued IPL Hair Removal product line by rebuilding marketplace SEO across product titles, keywords, listings, benefit messaging, FAQs, and review keywords, later supporting expansion into 7–8 additional IPL product series.</li>
+                                <li class="mb-2.5">• Built the kiki&amp;co brand from zero by defining positioning, analyzing competitors, shaping a Korean-inspired minimalist visual direction, and supporting a new hair styling product line launch.</li>
+                                <li class="mb-2.5">• Developed platform-led KOL and social proof strategies using X reviews, TikTok content behavior, TikTok Shop opportunities, and marketplace conversion signals to build trust and purchase intent for higher-priced beauty gadget products.</li>
+                                <li class="mb-2.5">• Drove a key beauty gadget product to #1 category ranking without celebrity endorsement through platform-specific KOL selection, alternative social proof, and conversion-led marketplace strategy.</li>
                             </ul>
                         </div>
                     </div>
@@ -686,6 +717,7 @@ body {
     </div>
 </section>
 
+<!-- 7. FEATURED CASE STUDIES SECTION -->
 <section id="projects" class="py-24 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center space-y-2 mb-16">
@@ -696,17 +728,17 @@ body {
 
         <div class="grid lg:grid-cols-2 gap-10">
             
+            <!-- CASE 1: Chatrium 11.11 Mega Campaign -->
             <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
                 <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-zinc-900 to-black z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-zinc-900 opacity-90"></div>
-                    </div>
+                    <!-- BACKGROUND IMAGE LOADS COMPLIANT TO GITHUB PATH -->
+                    <img src="images/cases/hospitality-1111.png" alt="11.11 Mega Campaign Cover" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 transition-transform duration-500 group-hover:scale-[1.02]">
                     <div class="w-full flex justify-between items-center z-10 relative">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
                             <span class="w-1.5 h-1.5 rounded-full bg-rose-500 animate-pulse"></span> INTEGRATED_LIVE_COMMERCE
                         </span>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10 pointer-events-none z-10"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10 pointer-events-none z-10"></div>
                     <div class="w-full grid grid-cols-12 gap-2 items-end z-20 relative pt-16">
                         <div class="col-span-12 space-y-1">
                             <h2 class="text-3xl md:text-4xl font-black text-white tracking-tighter leading-none font-sans uppercase">
@@ -761,17 +793,17 @@ body {
                 </div>
             </div>
 
+            <!-- CASE 2: IPL Hair Removal Revival -->
             <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
                 <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black to-zinc-900 z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-zinc-900 opacity-90"></div>
-                    </div>
+                    <!-- BACKGROUND IMAGE LOADS COMPLIANT TO GITHUB PATH -->
+                    <img src="images/cases/CGB.png" alt="IPL Hair Removal Cover" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 transition-transform duration-500 group-hover:scale-[1.02]">
                     <div class="w-full flex justify-between items-center z-10 relative">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
                             <span class="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span> MARKETPLACE_SEO_TURNAROUND
                         </span>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10 pointer-events-none z-10"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10 pointer-events-none z-10"></div>
                     <div class="w-full z-20 relative pt-16">
                         <div class="space-y-1">
                             <h2 class="text-3xl md:text-4xl font-black text-white tracking-tighter leading-none font-sans uppercase">
@@ -818,17 +850,17 @@ body {
                 </div>
             </div>
 
+            <!-- CASE 3: kiki&co Brand Launch -->
             <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
                 <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black to-zinc-900 z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-zinc-900 opacity-90"></div>
-                    </div>
+                    <!-- BACKGROUND IMAGE LOADS COMPLIANT TO GITHUB PATH -->
+                    <img src="images/cases/kikiandco.png" alt="kiki&co Launch Cover" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 transition-transform duration-500 group-hover:scale-[1.02]">
                     <div class="w-full flex justify-between items-center z-10 relative">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
                             <span class="w-1.5 h-1.5 rounded-full bg-blue-500 animate-pulse"></span> BRAND_BUILT_FROM_ZERO
                         </span>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10 pointer-events-none z-10"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10 pointer-events-none z-10"></div>
                     <div class="w-full z-20 relative pt-16">
                         <div class="space-y-1">
                             <h2 class="text-3xl md:text-4xl font-black text-white tracking-tighter leading-none font-sans uppercase">
@@ -875,21 +907,21 @@ body {
                 </div>
             </div>
 
+            <!-- CASE 4: Beauty Gadget Social Commerce Growth -->
             <div class="bg-navy-950 rounded-3xl overflow-hidden border border-white/5 flex flex-col reveal shadow-2xl">
                 <div class="w-full relative min-h-[260px] md:min-h-[300px] overflow-hidden bg-zinc-900 flex flex-col justify-between p-4 group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-black to-zinc-900 z-0 flex items-center justify-center text-center p-6 text-zinc-600 font-mono text-xs">
-                        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 to-zinc-900 opacity-90"></div>
-                    </div>
+                    <!-- BACKGROUND IMAGE LOADS COMPLIANT TO GITHUB PATH -->
+                    <img src="images/cases/KOL.png" alt="Social Commerce Growth Cover" class="absolute inset-0 w-full h-full object-cover opacity-40 z-0 transition-transform duration-500 group-hover:scale-[1.02]">
                     <div class="w-full flex justify-between items-center z-10 relative">
-                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/60 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
-                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span> CONVERSION CREDIBILITY CASE
+                        <span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-md bg-black/70 backdrop-blur-md border border-white/10 font-mono text-[9px] font-bold text-slate-300">
+                            <span class="w-1.5 h-1.5 rounded-full bg-cyan-500 animate-pulse"></span> PLATFORM_LED_GROWTH
                         </span>
                     </div>
-                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/30 to-black/10 pointer-events-none z-10"></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-black/40 to-black/10 pointer-events-none z-10"></div>
                     <div class="w-full z-20 relative pt-16">
                         <div class="space-y-1">
                             <h2 class="text-3xl md:text-4xl font-black text-white tracking-tighter leading-none font-sans uppercase">
-                                Electric Guasha Growth <span class="text-xs sm:text-sm tracking-[0.15em] uppercase font-bold text-slate-300 block mt-1">SOCIAL PROOF WITHOUT CELEBRITY ENDORSEMENT</span>
+                                Beauty Gadget Social Commerce Growth <span class="text-xs sm:text-sm tracking-[0.15em] uppercase font-bold text-slate-300 block mt-1">PLATFORM-LED KOL &amp; SOCIAL PROOF STRATEGY</span>
                             </h2>
                         </div>
                     </div>
@@ -898,22 +930,22 @@ body {
                     <div class="flex items-center gap-4">
                         <div class="w-12 h-12 rounded-full border border-cyan-500/30 flex items-center justify-center bg-cyan-500/10 text-cyan-400"><i class="fa-solid fa-star text-sm"></i></div>
                         <div class="space-y-0.5">
-                            <h4 class="text-xs font-bold text-white uppercase tracking-wider">KOL &amp; REVIEW ECOSYSTEM STRATEGY</h4>
+                            <h4 class="text-xs font-bold text-white uppercase tracking-wider">KOL &amp; ALTERNATIVE PLATFORM STRATEGY</h4>
                             <div class="flex items-center gap-3 text-[10px] text-slate-400 font-mono">
-                                <span>X Reviews • KOL Strategy • Conversion Credibility</span>
+                                <span>TikTok Shop • X Reviews • KOL Selection • Marketplace Conversion</span>
                             </div>
                         </div>
                     </div>
                     <div class="grid grid-cols-2 gap-4 border-t border-white/5 pt-4">
                         <div><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">CATEGORY PERFORMANCE</span><span class="text-xl font-black text-white tracking-tight">#1 Position</span></div>
-                        <div class="text-right"><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">ENDORSEMENT COST</span><span class="text-xl font-black text-cyan-400 tracking-tight">No Celebrity</span></div>
+                        <div class="text-right"><span class="text-[8px] uppercase font-mono tracking-wider text-slate-500 block">GROWTH APPROACH</span><span class="text-lg font-black text-cyan-400 tracking-tight">Organic Trust Built</span></div>
                     </div>
                 </div>
                 <div class="p-6 md:p-8 space-y-4 flex-grow flex flex-col justify-between bg-navy-950">
                     <div class="space-y-2">
-                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">CONVERSION CREDIBILITY CASE</span>
-                        <h3 class="text-xl font-bold text-white tracking-tight">Building Demand Through Review-Led Social Proof</h3>
-                        <p class="text-xs text-slate-400 leading-relaxed font-light">Built a data-driven review ecosystem on X to create product credibility and conversion intent without relying on celebrity endorsement. KOLs were selected based on conversion potential, audience fit, and ability to strengthen product trust.</p>
+                        <span class="text-gold text-[10px] font-black uppercase tracking-widest block">SOCIAL COMMERCE GROWTH CASE</span>
+                        <h3 class="text-xl font-bold text-white tracking-tight">Building Demand Through Platform-Specific Social Proof</h3>
+                        <p class="text-xs text-slate-400 leading-relaxed font-light">Built demand for premium beauty gadget products by selecting conversion-driven KOLs and using platform-specific social proof beyond the usual beauty playbook. Instead of relying only on Instagram-style promotion or celebrity endorsement, the strategy used X reviews, TikTok content behavior, TikTok Shop opportunities, and marketplace conversion signals to build product trust and purchase intent.</p>
                     </div>
                     <div class="pt-4 border-t border-white/5">
                         <button onclick="toggleSTAR('ecommerce-02')" class="text-[10px] text-gold font-black uppercase tracking-wider flex items-center gap-2 hover:text-white transition-colors focus:outline-none">
@@ -921,11 +953,11 @@ body {
                         </button>
                         <div id="star-ecommerce-02" class="hidden mt-4 pt-4 border-t border-white/5 space-y-4 text-xs font-light">
                             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Electric Guasha needed to build credibility and demand in a competitive beauty gadget market without relying on expensive celebrity endorsement.</p></div>
-                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4><p class="text-slate-400 leading-relaxed text-[11px]">Create trust, social proof, and purchase intent through cost-efficient digital channels while maintaining a premium product image.</p></div>
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">SITUATION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Premium beauty gadget products needed to build credibility and demand in a competitive market without relying on expensive celebrity endorsement or the usual Instagram-led beauty promotion approach.</p></div>
+                                <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">TASK</h4><p class="text-slate-400 leading-relaxed text-[11px]">Identify the right platforms, KOL segments, and social proof formats that could make higher-priced beauty gadgets feel trustworthy, understandable, and worth buying across social commerce and marketplace channels.</p></div>
                             </div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Built a data-driven review ecosystem on X, selected KOLs based on conversion potential rather than follower count, and used social proof as a conversion asset. Expanded influencer segments beyond typical beauty audiences while maintaining a premium and high-end product image.</p></div>
-                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4><p class="text-slate-400 leading-relaxed text-[11px]">Scaled Electric Guasha to #1 category ranking without celebrity endorsement, strengthening product credibility and market demand through a KOL and review-driven social proof strategy.</p></div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">ACTION</h4><p class="text-slate-400 leading-relaxed text-[11px]">Selected KOLs based on conversion potential, audience fit, content behavior, and credibility rather than follower count alone. Used X reviews to build searchable social proof and credibility, while also leveraging TikTok content behavior and TikTok Shop opportunities to challenge the assumption that higher-priced beauty gadgets could not sell well on a younger platform.</p></div>
+                            <div class="space-y-1 bg-white/[0.01] p-3 rounded-xl border border-white/5"><h4 class="font-extrabold text-gold uppercase tracking-wider text-[10px]">RESULT</h4><p class="text-slate-400 leading-relaxed text-[11px]">Strengthened beauty gadget credibility, purchase intent, and marketplace performance through platform-specific KOL selection, X review credibility, TikTok-led content behavior, and social proof strategy, contributing to #1 category performance for a key beauty gadget product without celebrity endorsement.</p></div>
                         </div>
                     </div>
                 </div>
@@ -935,6 +967,7 @@ body {
     </div>
 </section>
 
+<!-- 8. VALIDATION RECORDS SECTION (BRAND COLLABORATIONS) -->
 <section id="showcase" class="py-24 bg-navy-950/40 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center space-y-2 mb-16">
@@ -945,6 +978,7 @@ body {
 
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
             
+            <!-- LEFT CARD: STRATEGIC BRAND COLLABORATIONS -->
             <div class="lg:col-span-6 glass rounded-3xl p-6 flex flex-col justify-between space-y-6 reveal">
                 <div class="space-y-1">
                     <span class="text-gold text-[10px] font-black uppercase tracking-widest">STRATEGIC BRAND COLLABORATIONS</span>
@@ -953,51 +987,58 @@ body {
                 </div>
                 <div class="grid grid-cols-2 sm:grid-cols-3 gap-4">
                     
-                    <button onclick="openCollabModal('laneige', 'LANEIGE x CBG Devices Campaign', 'Water Sleeping Mask Campaign Bundle Set &amp; Marketplace Activation', 'Co-branded bundle campaign featuring CBG beauty devices and LANEIGE Water Sleeping Mask, developed for marketplace promotion, campaign activation, and conversion-focused product bundling. The collaboration helped strengthen campaign credibility by pairing beauty gadget products with an established skincare brand.', 'Co-Branding • Bundle Campaign • Marketplace Activation • Beauty Partnership')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-4 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
-                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-600 group-hover:text-gold transition-colors z-20">
+                    <!-- Brand 1: LANEIGE -->
+                    <button onclick="openCollabModal('laneige', 'LANEIGE x CBG Devices Campaign', 'Water Sleeping Mask Campaign Bundle Set &amp; Marketplace Activation', 'Co-branded bundle campaign featuring CBG beauty devices and LANEIGE Water Sleeping Mask, developed for marketplace promotion, campaign activation, and conversion-focused product bundling. The collaboration helped strengthen campaign credibility by pairing beauty gadget products with an established skincare brand.', 'Co-Branding • Bundle Campaign • Marketplace Activation • Beauty Partnership')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-0 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
+                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-500 group-hover:text-gold transition-colors z-30">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center p-3 opacity-25 group-hover:opacity-45 transition-opacity z-10"><i class="fa-regular fa-image text-lg"></i></div>
+                        <img src="images/logos/laneige.png" alt="Laneige Logo" class="w-full h-full object-contain p-4 opacity-75 group-hover:opacity-100 transition-opacity z-10">
                     </button>
 
-                    <button onclick="openCollabModal('watsons', 'Watsons x CBG Devices Campaign', 'Retail Partnership Campaign Asset &amp; Marketplace Promotion', 'Campaign asset developed for collaboration or barter-based promotion with Watsons, supporting product visibility, brand credibility, and marketplace campaign communication. The partnership helped connect CBG beauty gadget products with a trusted beauty and wellness retail audience.', 'Retail Partner • Beauty &amp; Wellness • Campaign Asset • Marketplace Promotion')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-4 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
-                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-600 group-hover:text-gold transition-colors z-20">
+                    <!-- Brand 2: Watsons -->
+                    <button onclick="openCollabModal('watsons', 'Watsons x CBG Devices Campaign', 'Retail Partnership Campaign Asset &amp; Marketplace Promotion', 'Campaign asset developed for collaboration or barter-based promotion with Watsons, supporting product visibility, brand credibility, and marketplace campaign communication. The partnership helped connect CBG beauty gadget products with a trusted beauty and wellness retail audience.', 'Retail Partner • Beauty &amp; Wellness • Campaign Asset • Marketplace Promotion')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-0 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
+                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-500 group-hover:text-gold transition-colors z-30">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center p-3 opacity-25 group-hover:opacity-45 transition-opacity z-10"><i class="fa-regular fa-image text-lg"></i></div>
+                        <img src="images/logos/watsons.png" alt="Watsons Logo" class="w-full h-full object-contain p-4 opacity-75 group-hover:opacity-100 transition-opacity z-10">
                     </button>
 
-                    <button onclick="openCollabModal('innisfree', 'Innisfree x CBG Devices Campaign', 'Beauty Collaboration Asset &amp; Product Bundle Promotion', 'Beauty collaboration asset created to support product bundle communication and campaign credibility. The campaign connected CBG beauty devices with a recognized skincare brand to strengthen perceived value, audience trust, and conversion-focused marketplace promotion.', 'Beauty Collaboration • Product Bundle • Brand Trust • Campaign Rollout')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-4 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
-                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-600 group-hover:text-gold transition-colors z-20">
+                    <!-- Brand 3: Innisfree -->
+                    <button onclick="openCollabModal('innisfree', 'Innisfree x CBG Devices Campaign', 'Beauty Collaboration Asset &amp; Product Bundle Promotion', 'Beauty collaboration asset created to support product bundle communication and campaign credibility. The campaign connected CBG beauty devices with a recognized skincare brand to strengthen perceived value, audience trust, and conversion-focused marketplace promotion.', 'Beauty Collaboration • Product Bundle • Brand Trust • Campaign Rollout')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-0 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
+                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-500 group-hover:text-gold transition-colors z-30">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center p-3 opacity-25 group-hover:opacity-45 transition-opacity z-10"><i class="fa-regular fa-image text-lg"></i></div>
+                        <img src="images/logos/innisfree.png" alt="Innisfree Logo" class="w-full h-full object-contain p-4 opacity-75 group-hover:opacity-100 transition-opacity z-10">
                     </button>
 
-                    <button onclick="openCollabModal('vistra', 'Vistra x CBG Devices Campaign', 'Wellness Partnership Asset &amp; Campaign Bundle Activation', 'Campaign asset developed for a wellness-focused collaboration, connecting CBG beauty gadget products with Vistra’s health and wellness positioning. The campaign supported credibility, audience expansion, and value-added product bundle communication.', 'Wellness Partner • Barter Campaign • Bundle Activation • Audience Expansion')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-4 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
-                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-600 group-hover:text-gold transition-colors z-20">
+                    <!-- Brand 4: Vistra -->
+                    <button onclick="openCollabModal('vistra', 'Vistra x CBG Devices Campaign', 'Wellness Partnership Asset &amp; Campaign Bundle Activation', 'Campaign asset developed for a wellness-focused collaboration, connecting CBG beauty gadget products with Vistra’s health and wellness positioning. The campaign supported credibility, audience expansion, and value-added product bundle communication.', 'Wellness Partner • Barter Campaign • Bundle Activation • Audience Expansion')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-0 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
+                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-500 group-hover:text-gold transition-colors z-30">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center p-3 opacity-25 group-hover:opacity-45 transition-opacity z-10"><i class="fa-regular fa-image text-lg"></i></div>
+                        <img src="images/logos/vistra.png" alt="Vistra Logo" class="w-full h-full object-contain p-4 opacity-75 group-hover:opacity-100 transition-opacity z-10">
                     </button>
 
-                    <button onclick="openCollabModal('provamed', 'Provamed x CBG Devices Campaign', 'Dermocosmetic Collaboration Asset &amp; Marketplace Campaign', 'Collaboration asset created with a dermocosmetic skincare partner to support beauty gadget campaign communication. The campaign helped reinforce product trust, skincare relevance, and conversion-focused marketplace positioning.', 'Dermocosmetic Partner • Skincare Credibility • Campaign Asset • Marketplace Conversion')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-4 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
-                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-600 group-hover:text-gold transition-colors z-20">
+                    <!-- Brand 5: Provamed -->
+                    <button onclick="openCollabModal('provamed', 'Provamed x CBG Devices Campaign', 'Dermocosmetic Collaboration Asset &amp; Marketplace Campaign', 'Collaboration asset created with a dermocosmetic skincare partner to support beauty gadget campaign communication. The campaign helped reinforce product trust, skincare relevance, and conversion-focused marketplace positioning.', 'Dermocosmetic Partner • Skincare Credibility • Campaign Asset • Marketplace Conversion')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-0 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
+                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-500 group-hover:text-gold transition-colors z-30">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center p-3 opacity-25 group-hover:opacity-45 transition-opacity z-10"><i class="fa-regular fa-image text-lg"></i></div>
+                        <img src="images/logos/provamed.png" alt="Provamed Logo" class="w-full h-full object-contain p-4 opacity-75 group-hover:opacity-100 transition-opacity z-10">
                     </button>
 
-                    <button onclick="openCollabModal('araya', 'Araya x CBG Devices Campaign', 'Beauty Partnership Asset &amp; Promotional Bundle Campaign', 'Promotional collaboration asset developed for a beauty-focused campaign, supporting marketplace communication, brand credibility, and value-added product bundling. The campaign helped present CBG beauty devices within a stronger lifestyle and beauty context.', 'Beauty Partner • Promotional Bundle • Campaign Proof • Marketplace Asset')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-4 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
-                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-600 group-hover:text-gold transition-colors z-20">
+                    <!-- Brand 6: Araya -->
+                    <button onclick="openCollabModal('araya', 'Araya x CBG Devices Campaign', 'Beauty Partnership Asset &amp; Promotional Bundle Campaign', 'Promotional collaboration asset developed for a beauty-focused campaign, supporting marketplace communication, brand credibility, and value-added product bundling. The campaign helped present CBG beauty devices within a stronger lifestyle and beauty context.', 'Beauty Partner • Promotional Bundle • Campaign Proof • Marketplace Asset')" class="border border-white/5 bg-navy-900/40 hover:border-gold/30 rounded-2xl p-0 flex items-center justify-center text-center aspect-square group relative overflow-hidden focus:outline-none transition-all shadow-xl">
+                        <div class="absolute top-2.5 right-2.5 text-[10px] text-zinc-500 group-hover:text-gold transition-colors z-30">
                             <i class="fa-solid fa-magnifying-glass-plus"></i>
                         </div>
-                        <div class="absolute inset-0 flex items-center justify-center p-3 opacity-25 group-hover:opacity-45 transition-opacity z-10"><i class="fa-regular fa-image text-lg"></i></div>
+                        <img src="images/logos/araya.png" alt="Araya Logo" class="w-full h-full object-contain p-4 opacity-75 group-hover:opacity-100 transition-opacity z-10">
                     </button>
 
                 </div>
             </div>
 
+            <!-- RIGHT CARD: BUSINESS INTELLIGENCE SUITE -->
             <div class="lg:col-span-6 glass rounded-3xl p-6 flex flex-col justify-between reveal space-y-4">
                 <div class="space-y-1">
                     <span class="text-gold text-[10px] font-black uppercase tracking-widest">BUSINESS INTELLIGENCE SUITE</span>
@@ -1024,6 +1065,7 @@ body {
     </div>
 </section>
 
+<!-- 9. GROWTH SYSTEMS & CONVERSION PLAYBOOKS PROCESS FLOW -->
 <section id="playbooks" class="py-24 relative z-10 border-t border-white/5">
     <div class="max-w-7xl mx-auto px-6">
         <div class="text-center space-y-2 mb-12">
@@ -1032,8 +1074,10 @@ body {
             <p class="text-slate-400 text-xs md:text-sm max-w-xl mx-auto">A repeatable growth workflow for identifying sales leaks, rebuilding product visibility, improving conversion readiness, and scaling what proves profitable.</p>
         </div>
 
+        <!-- Flow System Layout Grid -->
         <div class="grid grid-cols-1 md:grid-cols-4 gap-6 relative">
             
+            <!-- Step 1 -->
             <div class="bg-navy-950/40 border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between shadow-xl group hover:border-gold/30 transition-all duration-300">
                 <div class="space-y-3">
                     <span class="text-gold font-mono text-xs font-bold block">01 Insight Discovery</span>
@@ -1044,6 +1088,7 @@ body {
                 </div>
             </div>
 
+            <!-- Step 2 -->
             <div class="bg-navy-950/40 border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between shadow-xl group hover:border-gold/30 transition-all duration-300">
                 <div class="space-y-3">
                     <span class="text-gold font-mono text-xs font-bold block">02 SEO &amp; Positioning Blueprint</span>
@@ -1054,6 +1099,7 @@ body {
                 </div>
             </div>
 
+            <!-- Step 3 -->
             <div class="bg-navy-950/40 border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between shadow-xl group hover:border-gold/30 transition-all duration-300">
                 <div class="space-y-3">
                     <span class="text-gold font-mono text-xs font-bold block">03 Creative &amp; Funnel Execution</span>
@@ -1064,6 +1110,7 @@ body {
                 </div>
             </div>
 
+            <!-- Step 4 -->
             <div class="bg-navy-950/40 border border-white/5 p-6 rounded-2xl relative flex flex-col justify-between shadow-xl group hover:border-gold/30 transition-all duration-300">
                 <div class="space-y-3">
                     <span class="text-gold font-mono text-xs font-bold block">04 ROAS Measurement &amp; Scale</span>
@@ -1075,6 +1122,7 @@ body {
     </div>
 </section>
 
+<!-- 10. VERIFIED ACADEMIC FOUNDATIONS STRIP -->
 <div class="max-w-7xl mx-auto px-6 relative z-10 pb-12">
     <div class="glass p-6 rounded-3xl border-white/5 flex flex-col sm:flex-row justify-between items-center gap-4">
         <div class="flex items-center gap-4 text-center sm:text-left flex-col sm:flex-row">
@@ -1091,13 +1139,16 @@ body {
     </div>
 </div>
 
+<!-- VERIFIED CAMPAIGN MODAL -->
 <div id="collab-modal" class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-md hidden opacity-0 transition-opacity duration-300">
     <div class="bg-slate-900 border border-white/10 w-full max-w-2xl rounded-2xl overflow-hidden shadow-2xl relative transform scale-95 transition-transform duration-300" id="modal-container">
         
+        <!-- CLOSE BUTTON WITH TOP LAYER Z-INDEX -->
         <button onclick="closeCollabModal()" class="absolute top-4 right-4 z-50 w-8 h-8 rounded-full bg-black/75 border border-white/10 flex items-center justify-center text-white hover:text-gold transition-colors focus:outline-none">
             <i class="fa-solid fa-xmark text-sm"></i>
         </button>
         
+        <!-- ARTWORK IMAGE BOX -->
         <div class="w-full aspect-video bg-zinc-950 relative border-b border-white/5 overflow-hidden flex items-center justify-center">
             <img id="modal-img" src="" alt="Campaign Record Reference Asset" class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 z-10" onload="this.style.opacity='1'">
         </div>
@@ -1131,7 +1182,7 @@ body {
                         <i class="fa-solid fa-envelope text-sm"></i>
                     </div>
                     <div class="text-left">
-                        <p class="text-xs font-black text-white uppercase tracking-wider">Direct Corporate Email</p>
+                        <p class="text-xs font-black text-white tracking-wider">Direct Corporate Email</p>
                         <p class="text-[11px] text-slate-500 mt-0.5">shilm801@gmail.com</p>
                     </div>
                 </div>
